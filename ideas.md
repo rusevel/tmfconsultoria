@@ -45,7 +45,7 @@ Usar Manrope para corpo e navegação, com pesos 400, 500, 700 e 800. Usar Space
 
 ## Brand Essence
 
-ALTA é uma presença digital premium para empresas que querem parecer tão profissionais quanto o serviço que entregam, com contato imediato pelo WhatsApp. Personalidade: precisa, confiante e acessível.
+ALTA é uma consultoria integrada para empresas que querem reduzir riscos, encontrar oportunidades legais e crescer com clareza, conectando tributos, contabilidade, marketing e TI. Personalidade: precisa, confiante e responsável.
 
 ## Brand Voice
 
@@ -53,8 +53,8 @@ Headlines devem ser assertivas, específicas e orientadas a resultado. CTAs deve
 
 Exemplos:
 
-- “Quero saber mais sobre o site”
-- “Explique sua necessidade. A primeira conversa começa aqui.”
+- “Quero agendar um diagnóstico tributário para minha empresa.”
+- “Conte o principal desafio. A próxima decisão começa com clareza.”
 
 ## Wordmark & Logo
 
@@ -63,6 +63,10 @@ O wordmark ALTA será tipográfico, com letras espaçadas e ponto verde como ass
 ## Signature Brand Color
 
 Verde ALTA: #31D17C.
+
+## Conversão e responsabilidade
+
+O CTA principal conduz para um diagnóstico inicial, não para uma promessa automática de economia. A comunicação deve usar expressões como “avaliar oportunidades legais”, “mapear riscos” e “analisar o cenário da empresa”, evitando “garantia de redução”, “pague menos com certeza” ou qualquer resultado sem diagnóstico.
 
 ## Conteúdo e integridade
 
