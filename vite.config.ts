@@ -206,6 +206,8 @@ function vitePluginStorageProxy(): Plugin {
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
 
 export default defineConfig({
+  // GitHub Pages publishes this repository under /tmfconsultoria/; local/Manus stays at /.
+  base: process.env.GITHUB_ACTIONS ? "/tmfconsultoria/" : "/",
   plugins,
   resolve: {
     alias: {
