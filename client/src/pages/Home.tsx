@@ -1,5 +1,5 @@
 /*
- * ALTA visual system: dark editorial minimalism, emerald action color, asymmetric layouts,
+ * TMF visual system: dark editorial minimalism, emerald action color, asymmetric layouts,
  * Space Grotesk display type + Manrope body type, restrained motion and direct CTAs.
  */
 import { useState } from "react";
@@ -28,9 +28,9 @@ export default function Home() {
     <div className="site-shell">
       <header className="site-header">
         <div className="wrap nav">
-          <a className="brand" href="#top" aria-label="ALTA início">
+          <a className="brand" href="#top" aria-label="TMF início">
             <span className="brand-mark" aria-hidden="true"><span /></span>
-            <span>ALTA<span className="brand-dot">.</span></span>
+            <span>TMF<span className="brand-dot">.</span></span>
           </a>
           <nav className="desktop-nav" aria-label="Navegação principal">
             <a href="#solucoes">Áreas de atuação</a>
@@ -59,7 +59,7 @@ export default function Home() {
             <div className="hero-visual reveal" aria-label="Prévia visual de um site premium">
               <div className="orb orb-one" /><div className="orb orb-two" />
               <div className="browser-frame">
-                <div className="browser-top"><span /><span /><span /><small>alta.studio / preview</small></div>
+                <div className="browser-top"><span /><span /><span /><small>tmf.consultoria / preview</small></div>
                 <div className="browser-content">
                   <div className="preview-kicker">intelligence / 01</div>
                   <h2>Decisões que<br /><strong>protegem margem.</strong></h2>
@@ -94,7 +94,7 @@ export default function Home() {
         <section className="section contact-section"><div className="wrap"><div className="contact-box reveal"><div className="contact-copy"><span className="section-kicker">diagnóstico inicial</span><h2>Quero entender<br /><em>onde melhorar.</em></h2><p>Deixe seu e-mail ou fale diretamente com a gente. Conte o principal desafio da sua empresa e receba o próximo passo.</p></div><div className="contact-actions"><form onSubmit={handleEmailSubmit} className="email-form"><label htmlFor="email">E-mail corporativo</label><div className="email-input-wrap"><Mail size={18} /><input id="email" type="email" placeholder="voce@empresa.com.br" value={email} onChange={(event) => { setEmail(event.target.value); setEmailSent(false); }} required /><button type="submit" aria-label="Enviar e-mail"><ArrowUpRight size={19} /></button></div>{emailSent && <small className="form-success">E-mail preparado. Finalize o contato no WhatsApp.</small>}</form><a className="button button-primary contact-button" href={whatsappUrl("Quero entender onde melhorar na minha empresa.")} target="_blank" rel="noreferrer"><MessageCircle size={18} /> Falar com um consultor</a></div></div></div></section>
       </main>
 
-      <footer className="site-footer"><div className="wrap footer-inner"><a className="brand" href="#top"><span className="brand-mark" aria-hidden="true"><span /></span><span>ALTA<span className="brand-dot">.</span></span></a><span>Clareza para decidir melhor.</span><a href={whatsappUrl()} target="_blank" rel="noreferrer">+55 11 96929-3429 <ArrowUpRight size={14} /></a></div></footer>
+      <footer className="site-footer"><div className="wrap footer-inner"><a className="brand" href="#top"><span className="brand-mark" aria-hidden="true"><span /></span><span>TMF<span className="brand-dot">.</span></span></a><span>Clareza para decidir melhor.</span><a href={whatsappUrl()} target="_blank" rel="noreferrer">+55 11 96929-3429 <ArrowUpRight size={14} /></a></div></footer>
       <a className="whatsapp-float" href={whatsappUrl()} target="_blank" rel="noreferrer" aria-label="Abrir conversa no WhatsApp"><MessageCircle size={28} /></a>
     </div>
   );

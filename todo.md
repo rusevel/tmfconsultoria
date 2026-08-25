@@ -1,5 +1,7 @@
-# Evolução do site e publicação no Samsung via Termux
+# Evolução do site TMF e publicação no Samsung via Termux
 
+- [ ] Trocar a marca ALTA por TMF — Tecnologia, Marketing e Fiscal Consultoria.
+- [ ] Atualizar wordmark, título, SEO, descrições e endereço do site.
 - [ ] Redefinir a proposta de valor para consultoria tributária, contábil, fiscal, marketing e TI.
 - [ ] Criar copy de alta conversão sem prometer economia tributária garantida.
 - [ ] Adicionar SEO técnico e palavras-chave orientadas à intenção de busca.

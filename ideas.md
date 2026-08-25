@@ -1,4 +1,4 @@
-# Direção visual — ALTA
+# Direção visual — TMF
 
 ## Especificação de referência
 
@@ -45,7 +45,7 @@ Usar Manrope para corpo e navegação, com pesos 400, 500, 700 e 800. Usar Space
 
 ## Brand Essence
 
-ALTA é uma consultoria integrada para empresas que querem reduzir riscos, encontrar oportunidades legais e crescer com clareza, conectando tributos, contabilidade, marketing e TI. Personalidade: precisa, confiante e responsável.
+TMF — Tecnologia, Marketing e Fiscal Consultoria é uma consultoria integrada para empresas que querem reduzir riscos, encontrar oportunidades legais e crescer com clareza, conectando tributos, contabilidade, marketing e TI. Personalidade: precisa, confiante e responsável.
 
 ## Brand Voice
 
@@ -58,11 +58,11 @@ Exemplos:
 
 ## Wordmark & Logo
 
-O wordmark ALTA será tipográfico, com letras espaçadas e ponto verde como assinatura. O símbolo será um monograma geométrico “A” formado por duas hastes ascendentes e um corte horizontal, sem texto, usado como marca visual no header e favicon.
+O wordmark TMF será tipográfico, com letras espaçadas e ponto verde como assinatura. O símbolo será um monograma geométrico “A” formado por duas hastes ascendentes e um corte horizontal, sem texto, usado como marca visual no header e favicon.
 
 ## Signature Brand Color
 
-Verde ALTA: #31D17C.
+Verde TMF: #31D17C.
 
 ## Conversão e responsabilidade
 
