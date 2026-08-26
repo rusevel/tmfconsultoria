@@ -192,3 +192,7 @@
 - [ ] Adicionar botão flutuante Voltar ao Topo em /apresentacao e /casos-de-sucesso.
 - [ ] Criar e publicar imagem institucional otimizada para og:image nas novas páginas.
 - [ ] Validar visual, idioma, SEO/Open Graph, responsividade e deploy.
+
+- [ ] Corrigir a URL og:image, pois o caminho manus-storage está retornando index.html no Firebase.
+- [ ] Gerar uma imagem institucional estática otimizada em 1200x630 e incluí-la no build público.
+- [ ] Reexecutar o deploy e confirmar Content-Type image/jpeg na imagem Open Graph.
