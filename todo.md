@@ -117,3 +117,6 @@
 
 - [ ] Adicionar o LinkedIn oficial da Cenvara ao rodapé com abertura segura.
 - [ ] Registrar e testar o evento de clique do LinkedIn no Analytics consentido.
+
+- [ ] Adicionar o Pinterest oficial da Cenvara ao rodapé com abertura segura.
+- [ ] Registrar e testar o evento de clique do Pinterest no Analytics consentido.

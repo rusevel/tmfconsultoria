@@ -44,6 +44,8 @@ describe("metadados institucionais da Cenvara", () => {
     expect(footer).toContain('facebook_click');
     expect(footer).toContain("cenvara-consult-33445a431");
     expect(footer).toContain('linkedin_click');
+    expect(footer).toContain("pin.it/2KEwvnz2X");
+    expect(footer).toContain('pinterest_click');
     expect(footer).toContain('rel="noopener noreferrer"');
     expect(form).toContain('role="status"');
     expect(form).toContain("successRef");
