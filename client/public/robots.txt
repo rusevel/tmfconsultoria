@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tmf-consultoria.web.app/sitemap.xml
+Sitemap: https://cenvara-consultoria.web.app/sitemap.xml

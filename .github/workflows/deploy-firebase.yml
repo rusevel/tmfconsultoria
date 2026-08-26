@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   deploy:
-    name: Build and deploy TMF to Firebase
+    name: Build and deploy Cenvara to Firebase
     runs-on: ubuntu-latest
     steps:
       - name: Check out source
@@ -35,6 +35,6 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TMF_CONSULTORIA }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_CENVARA_CONSULTORIA }}
           channelId: live
-          projectId: tmf-consultoria
+          projectId: cenvara-consultoria

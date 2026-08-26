@@ -2,7 +2,7 @@
  * Cenvara visual system: dark editorial minimalism, emerald action color, asymmetric layouts,
  * Space Grotesk display type + Manrope body type, restrained motion and direct CTAs.
  */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowUpRight, Check, ChevronDown, Menu, MessageCircle, ShieldCheck, Sparkles, X, Zap } from "lucide-react";
 import { LeadQualificationForm } from "@/components/LeadQualificationForm";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
@@ -11,9 +11,33 @@ import { Brand } from "@/components/Brand";
 import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/whatsapp";
 
 const WHATSAPP_MESSAGE = DEFAULT_WHATSAPP_MESSAGE;
+const authorizedTestimonials = [
+  { quote: "Tivemos uma visão muito mais clara do nosso negócio. A TMF Consultoria nos ajudou a enxergar pontos que antes passavam despercebidos. A análise foi objetiva, profissional e trouxe informações importantes para tomarmos decisões com mais segurança.", name: "Carlos Mendes", role: "Empresário" },
+  { quote: "Atendimento próximo e soluções práticas. O que mais gostei foi a forma como a consultoria entendeu nossa realidade antes de apresentar qualquer solução. O atendimento foi muito transparente e as orientações foram realmente aplicáveis ao nosso negócio.", name: "Mariana Oliveira", role: "Gestora Administrativa" },
+  { quote: "Mais organização e segurança para decidir. Precisávamos entender melhor nossa situação e identificar onde poderíamos melhorar. A TMF fez uma análise completa e apresentou as informações de maneira simples e objetiva.", name: "Rafael Almeida", role: "Diretor Comercial" },
+  { quote: "Profissionalismo do início ao fim. Desde o primeiro contato, fomos muito bem atendidos. A equipe demonstrou conhecimento, organização e preocupação em entender nossas necessidades.", name: "Fernanda Costa", role: "Empresária" },
+  { quote: "Uma consultoria que realmente entende a empresa. A TMF não ficou apenas na teoria. Entenderam nossos desafios e apresentaram caminhos possíveis para melhorar nossa operação.", name: "Lucas Ferreira", role: "Sócio-Administrador" },
+  { quote: "Clareza para tomar decisões melhores. Antes da consultoria, tínhamos muitas informações, mas pouca clareza sobre o que realmente precisava ser priorizado. A análise da TMF ajudou a organizar as ideias e identificar oportunidades de melhoria.", name: "Patrícia Santos", role: "Empresária" },
+];
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const elements = Array.from(document.querySelectorAll<HTMLElement>(".reveal"));
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      elements.forEach((element) => element.classList.add("show"));
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    }), { threshold: 0.12, rootMargin: "0px 0px -42px" });
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="site-shell">
@@ -71,7 +95,7 @@ export default function Home() {
           <div className="wrap">
             <div className="section-heading reveal"><span className="section-kicker">áreas de atuação</span><h2>Uma visão integrada para <span>proteger e acelerar.</span></h2><p>Conectamos estratégia fiscal, contabilidade, marketing e tecnologia para que sua empresa encontre clareza antes de tomar decisões importantes.</p></div>
             <div className="solution-layout">
-              <article className="solution-card solution-feature reveal"><span className="card-number">01</span><div className="solution-icon"><Sparkles size={21} /></div><h3>Consultoria tributária e fiscal</h3><p>Mapeamos o cenário da empresa, identificamos riscos e avaliamos oportunidades previstas na legislação. Sem promessa genérica: cada recomendação depende dos seus dados.</p><a href={whatsappUrl("Quero agendar um diagnóstico tributário e fiscal.")} target="_blank" rel="noreferrer">Agendar diagnóstico <ArrowUpRight size={16} /></a></article>
+              <article className="solution-card solution-feature reveal"><span className="card-number">01</span><div className="solution-icon"><Sparkles size={21} /></div><h3>Consultoria tributária e fiscal</h3><p>Mapeamos o cenário da empresa, identificamos riscos e avaliamos oportunidades previstas na legislação. Sem promessa genérica: cada recomendação depende dos seus dados.</p><div className="service-links"><a className="service-cta" href="/consultoria-tributaria">Ver consultoria tributária <ArrowUpRight size={16} /></a><a className="service-cta" href="/consultoria-fiscal">Ver consultoria fiscal <ArrowUpRight size={16} /></a></div></article>
               <div className="solution-stack"><article className="solution-card reveal"><span className="card-number">02</span><div><h3>Contábil e financeiro</h3><p>Organização de informações e indicadores para apoiar planejamento e gestão.</p></div><ShieldCheck size={22} className="card-trailing-icon" /></article><article className="solution-card reveal"><span className="card-number">03</span><div><h3>Marketing e tecnologia</h3><p>Posicionamento, aquisição e processos digitais para transformar estratégia em execução.</p></div><MessageCircle size={22} className="card-trailing-icon" /></article></div>
             </div>
           </div>
@@ -79,7 +103,7 @@ export default function Home() {
 
         <section id="processo" className="section process-section"><div className="wrap process-wrap"><div className="section-heading reveal"><span className="section-kicker">nosso método</span><h2>Da complexidade<br /><span>à decisão segura.</span></h2></div><div className="process-list"><article className="process-row reveal"><span>01</span><div><h3>Diagnosticar</h3><p>Analisamos contexto, regime, operação, prioridades e pontos de atenção.</p></div><ArrowUpRight size={20} /></article><article className="process-row reveal"><span>02</span><div><h3>Priorizar</h3><p>Organizamos oportunidades e riscos para você saber o que merece atenção primeiro.</p></div><ArrowUpRight size={20} /></article><article className="process-row reveal"><span>03</span><div><h3>Implementar</h3><p>Você recebe uma direção prática para avançar com responsabilidade e acompanhamento.</p></div><ArrowUpRight size={20} /></article></div></div></section>
 
-        <TestimonialCarousel />
+        <TestimonialCarousel testimonials={authorizedTestimonials} />
 
         <section id="duvidas" className="section faq-section"><div className="wrap faq-layout"><div className="section-heading reveal"><span className="section-kicker">antes de conversar</span><h2>O essencial,<br /><span>sem rodeios.</span></h2><a className="text-link" href={whatsappUrl("Tenho uma dúvida sobre o diagnóstico tributário.")} target="_blank" rel="noreferrer">Tirar uma dúvida no WhatsApp <ArrowUpRight size={16} /></a></div><div className="faq-list reveal"><details><summary>Como começa o diagnóstico?<ChevronDown size={18} /></summary><p>Você envia uma mensagem com o segmento e o principal desafio da empresa. A partir daí, alinhamos o escopo das informações necessárias para uma análise responsável.</p></details><details><summary>A consultoria garante redução de impostos?<ChevronDown size={18} /></summary><p>Não existe promessa responsável sem análise. Avaliamos oportunidades legais conforme os dados e a legislação aplicável, sempre com transparência sobre premissas, riscos e limites.</p></details><details><summary>Vocês também atuam com marketing e TI?<ChevronDown size={18} /></summary><p>Sim. A proposta é integrar inteligência fiscal e contábil com posicionamento, aquisição e processos digitais, quando isso fizer sentido para o momento da empresa.</p></details></div></div></section>
 
