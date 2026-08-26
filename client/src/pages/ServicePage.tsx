@@ -1,8 +1,9 @@
 /* Cenvara visual system: dark editorial minimalism, emerald action color, authored display type, and proprietary diagnostic artifacts. */
 import { useEffect } from "react";
-import { ArrowLeft, ArrowUpRight, BarChart3, Check, ClipboardCheck, FileCheck2, Gauge, MessageCircle, ShieldCheck } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, BarChart3, Check, ClipboardCheck, FileCheck2, Gauge, ShieldCheck } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { Brand } from "@/components/Brand";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
 import { whatsappUrl } from "@/lib/whatsapp";
 
 type ServicePageProps = { kind: "tributaria" | "fiscal" };
@@ -74,7 +75,7 @@ export default function ServicePage({ kind }: ServicePageProps) {
   }, [page]);
 
   return <div className={`site-shell service-page service-${kind}`}>
-    <header className="site-header"><div className="wrap nav"><Brand /><nav className="desktop-nav" aria-label="Navegação principal"><a href="/#solucoes">Áreas de atuação</a><a href="/#processo">Método</a><a href="/#duvidas">Dúvidas</a><a className="nav-cta" href={whatsappUrl(page.message)} target="_blank" rel="noopener noreferrer">Falar com consultor <ArrowUpRight size={15} /></a></nav></div></header>
+    <SiteHeader contactMessage={page.message} />
     <main>
       <section className="service-hero"><div className="hero-art" aria-hidden="true" /><div className="wrap service-hero-layout"><div className="service-hero-inner"><a className="back-link" href="/"><ArrowLeft size={16} /> voltar para Cenvara</a><span className="eyebrow"><span className="pulse-dot" /> {page.eyebrow}</span><h1>{page.heading}</h1><p className="service-intro">{page.intro}</p><div className="hero-actions"><WhatsAppButton message={page.message}>{page.cta}</WhatsAppButton><a className="button button-quiet" href="#como-funciona">Entender a análise <ArrowUpRight size={16} /></a></div><div className="service-proof"><span><ShieldCheck size={16} /> análise responsável</span><span><Check size={16} /> foco no cenário real</span></div></div><DiagnosticArtifact page={page} kind={kind} /></div></section>
       <section id="como-funciona" className="section service-content"><div className="wrap service-content-grid"><div className="section-heading"><span className="section-kicker">quando procurar</span><h2>{kind === "tributaria" ? <>Boas perguntas<br /><span>antes do planejamento.</span></> : <>Boas perguntas<br /><span>antes da revisão.</span></>}</h2><p>Uma análise começa quando a empresa quer trocar suposições por informação organizada.</p></div><div className="question-list">{page.questions.map((question, index) => <div className="question-row" key={question}><span>0{index + 1}</span><p>{question}</p><ArrowUpRight size={16} /></div>)}</div></div></section>
@@ -82,6 +83,6 @@ export default function ServicePage({ kind }: ServicePageProps) {
       <section className="section service-crosslink"><div className="wrap crosslink-box"><div><span className="section-kicker">visão integrada</span><h2>Tributos, fiscal, contábil, marketing e TI precisam conversar.</h2><p>Conheça a abordagem completa da Cenvara para conectar decisão, operação e crescimento.</p></div><a className="button button-primary" href="/">Conhecer a Cenvara <ArrowUpRight size={16} /></a></div></section>
       <section className="section contact-section service-contact"><div className="wrap"><div className="contact-box"><div className="contact-copy"><span className="section-kicker">próximo passo</span><h2>Vamos entender<br /><em>o seu cenário.</em></h2><p>Conte o principal desafio da sua empresa e fale com a Cenvara pelo WhatsApp.</p></div><WhatsAppButton className="contact-button" message={page.message}>{page.cta}</WhatsAppButton></div></div></section>
     </main>
-    <footer className="site-footer"><div className="wrap footer-inner"><Brand /><span>Clareza para decidir. Estrutura para avançar.</span><a href="/politica-de-privacidade">Política de Privacidade</a><a href={whatsappUrl(page.message)} target="_blank" rel="noopener noreferrer"><MessageCircle size={14} /> +55 11 96929-3429 <ArrowUpRight size={14} /></a></div></footer>
+    <SiteFooter contactMessage={page.message} />
   </div>;
 }

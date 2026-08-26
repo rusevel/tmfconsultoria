@@ -2,13 +2,16 @@
  * Cenvara visual system: dark editorial minimalism, emerald action color, asymmetric layouts,
  * Space Grotesk display type + Manrope body type, restrained motion and direct CTAs.
  */
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "../leadership.css";
-import { ArrowUpRight, Check, ChevronDown, Menu, MessageCircle, ShieldCheck, Sparkles, X, Zap } from "lucide-react";
+import { ArrowUpRight, Check, ChevronDown, MessageCircle, ShieldCheck, Sparkles, Zap } from "lucide-react";
 import { LeadQualificationForm } from "@/components/LeadQualificationForm";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Brand } from "@/components/Brand";
+import { LeadershipCard } from "@/components/LeadershipCard";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
 import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/whatsapp";
 
 const WHATSAPP_MESSAGE = DEFAULT_WHATSAPP_MESSAGE;
@@ -22,8 +25,6 @@ const authorizedTestimonials = [
 ];
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll<HTMLElement>(".reveal"));
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -42,20 +43,7 @@ export default function Home() {
 
   return (
     <div className="site-shell">
-      <header className="site-header">
-        <div className="wrap nav">
-          <Brand href="#top" />
-          <nav className="desktop-nav" aria-label="Navegação principal">
-            <a href="#solucoes">Áreas de atuação</a>
-            <a href="#processo">Método</a>
-            <a href="#essencia">Essência</a>
-            <a href="#duvidas">Dúvidas</a>
-            <a className="nav-cta" href={whatsappUrl("Quero agendar um diagnóstico fiscal.")} target="_blank" rel="noreferrer">Agendar diagnóstico <ArrowUpRight size={15} /></a>
-          </nav>
-          <button className="mobile-menu-toggle" type="button" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen} aria-controls="mobile-nav" onClick={() => setMenuOpen((open) => !open)}>{menuOpen ? <X size={21} /> : <Menu size={21} />}</button>
-          {menuOpen && <nav id="mobile-nav" className="mobile-nav" aria-label="Navegação mobile"><a href="#solucoes" onClick={() => setMenuOpen(false)}>Áreas de atuação</a><a href="#processo" onClick={() => setMenuOpen(false)}>Método</a><a href="#essencia" onClick={() => setMenuOpen(false)}>Essência</a><a href="#duvidas" onClick={() => setMenuOpen(false)}>Dúvidas</a><a className="nav-cta" href={whatsappUrl("Quero agendar um diagnóstico fiscal.")} target="_blank" rel="noreferrer">Agendar diagnóstico <ArrowUpRight size={15} /></a></nav>}
-        </div>
-      </header>
+      <SiteHeader home contactMessage="Quero agendar um diagnóstico fiscal." />
 
       <main id="top">
         <section className="hero-section">
@@ -105,7 +93,21 @@ export default function Home() {
 
         <section id="processo" className="section process-section"><div className="wrap process-wrap"><div className="section-heading reveal"><span className="section-kicker">nosso método</span><h2>Da complexidade<br /><span>à decisão segura.</span></h2></div><div className="process-list"><article className="process-row reveal"><span>01</span><div><h3>Diagnosticar</h3><p>Analisamos contexto, regime, operação, prioridades e pontos de atenção.</p></div><ArrowUpRight size={20} /></article><article className="process-row reveal"><span>02</span><div><h3>Priorizar</h3><p>Organizamos oportunidades e riscos para você saber o que merece atenção primeiro.</p></div><ArrowUpRight size={20} /></article><article className="process-row reveal"><span>03</span><div><h3>Implementar</h3><p>Você recebe uma direção prática para avançar com responsabilidade e acompanhamento.</p></div><ArrowUpRight size={20} /></article></div></div></section>
 
-        <section id="essencia" className="section essence-section"><div className="wrap essence-layout"><div className="essence-intro reveal"><span className="section-kicker">essência Cenvara</span><h2>Uma marca criada para <span>organizar direção.</span></h2><p>Cenvara representa o centro da decisão, a leitura das variações de cada empresa e a direção que transforma informação em próximo passo.</p><div className="essence-mark" aria-hidden="true"><span>C</span><i /> <span>V</span><i /> <span>A</span></div></div><div className="essence-content"><article className="essence-opportunity reveal"><span className="card-number">base de atendimento</span><h3>Estratégia para empresas em São Paulo, com atuação responsável em todo o Brasil.</h3><p>A Cenvara parte do contexto real de cada empresa para mapear riscos, avaliar oportunidades legais e transformar informação em direção clara para a gestão.</p></article><div className="essence-cards"><article className="essence-card reveal"><span>01</span><h3>Visão</h3><p>Ser referência para empresas que buscam decisões mais claras, responsáveis e estruturadas.</p></article><article className="essence-card reveal"><span>02</span><h3>Missão</h3><p>Transformar complexidade fiscal, contábil, tecnológica e comercial em direção prática para a gestão.</p></article><article className="essence-card essence-values reveal"><span>03</span><h3>Valores</h3><p>Responsabilidade técnica, clareza aplicável, contexto antes da recomendação e parceria próxima.</p></article><article className="essence-card leadership-card reveal"><span>04 · liderança executiva</span><h3>Rusevel Barros</h3><p><strong>CEO &amp; CTO</strong><br />Consultor de tecnologia e analista de negócios, conecta processos, dados e ferramentas digitais que se tornam ativos estratégicos em mercados competitivos. Sua trajetória une operações, liderança de TI e apoio executivo, com foco em automação de fluxos, integração de sistemas, inteligência artificial e desenvolvimento web. Na Cenvara, transforma desafios fiscais e operacionais em soluções mais ágeis, úteis e preparadas para o crescimento de empresas de serviços e produtos.</p></article><article className="essence-card leadership-card reveal"><span>05 · liderança fiscal</span><h3>Jessica Carvalho</h3><p><strong>GFS — Gestora Fiscal Sênior</strong><br />Construiu sua trajetória na gestão fiscal e contábil. A experiência ao lado de Rusevel Barros na Gomes Contabilidade consolidou uma parceria de confiança entre conhecimento fiscal e tecnologia. Na Cenvara, lidera a frente fiscal para agilizar processos, organizar mudanças regulatórias e apoiar empresas de serviços e produtos que querem crescer com mais clareza.</p></article></div></div></div></section>
+        <section id="essencia" className="section essence-section">
+          <div className="wrap essence-layout">
+            <div className="essence-intro reveal"><span className="section-kicker">essência Cenvara</span><h2>Uma marca criada para <span>organizar direção.</span></h2><p>Cenvara representa o centro da decisão, a leitura das variações de cada empresa e a direção que transforma informação em próximo passo.</p><div className="essence-mark" aria-hidden="true"><span>C</span><i /> <span>V</span><i /> <span>A</span></div></div>
+            <div className="essence-content">
+              <article className="essence-opportunity reveal"><span className="card-number">base de atendimento</span><h3>Estratégia para empresas em São Paulo, com atuação responsável em todo o Brasil.</h3><p>A Cenvara parte do contexto real de cada empresa para mapear riscos, avaliar oportunidades legais e transformar informação em direção clara para a gestão.</p></article>
+              <div className="essence-cards">
+                <article className="essence-card reveal"><span>01</span><h3>Visão</h3><p>Ser referência para empresas que buscam decisões mais claras, responsáveis e estruturadas.</p></article>
+                <article className="essence-card reveal"><span>02</span><h3>Missão</h3><p>Transformar complexidade fiscal, contábil, tecnológica e comercial em direção prática para a gestão.</p></article>
+                <article className="essence-card essence-values reveal"><span>03</span><h3>Valores</h3><p>Responsabilidade técnica, clareza aplicável, contexto antes da recomendação e parceria próxima.</p></article>
+                <LeadershipCard index="04" label="liderança executiva" name="Rusevel Barros" role="CEO & CTO" biography="Consultor de tecnologia e analista de negócios, conecta processos, dados e ferramentas digitais que se tornam ativos estratégicos em mercados competitivos. Sua trajetória une operações, liderança de TI e apoio executivo, com foco em automação de fluxos, integração de sistemas, inteligência artificial e desenvolvimento web. Na Cenvara, transforma desafios fiscais e operacionais em soluções mais ágeis, úteis e preparadas para o crescimento de empresas de serviços e produtos." />
+                <LeadershipCard index="05" label="liderança fiscal" name="Jessica Carvalho" role="GFS — Gestora Fiscal Sênior" biography="Construiu sua trajetória na gestão fiscal e contábil. A experiência ao lado de Rusevel Barros na Gomes Contabilidade consolidou uma parceria de confiança entre conhecimento fiscal e tecnologia. Na Cenvara, lidera a frente fiscal para agilizar processos, organizar mudanças regulatórias e apoiar empresas de serviços e produtos que querem crescer com mais clareza." />
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section id="conexoes" className="section connections-section"><div className="wrap"><div className="section-heading reveal"><span className="section-kicker">rede de confiança</span><h2>Conexões que fazem parte<br /><span>da nossa trajetória.</span></h2><p>Conheça empresas e profissionais que fazem parte do nosso entorno profissional. Cada conexão mantém sua própria história, atuação e identidade.</p></div><div className="connections-grid"><article className="connection-card reveal"><span className="connection-index">01</span><div><h3>P2 Solutions</h3><p>Soluções e tecnologia para negócios.</p><a href="https://p2solutions.com.br/" target="_blank" rel="noopener noreferrer">Visitar site <ArrowUpRight size={15} /></a></div></article><article className="connection-card reveal"><span className="connection-index">02</span><div><h3>Acerta Assessoria Contábil</h3><p>Contabilidade e assessoria para empresas.</p><a href="https://acertaassessoria.com.br/" target="_blank" rel="noopener noreferrer">Visitar site <ArrowUpRight size={15} /></a></div></article><article className="connection-card reveal"><span className="connection-index">03</span><div><h3>Gomes Contabilidade</h3><p>Soluções contábeis personalizadas.</p><a href="https://www.gomescont.com.br/" target="_blank" rel="noopener noreferrer">Visitar site <ArrowUpRight size={15} /></a></div></article><article className="connection-card reveal"><span className="connection-index">04</span><div><h3>Paulibras</h3><p>Distribuição e reposição de autopeças.</p><a href="https://www.paulibras.com/" target="_blank" rel="noopener noreferrer">Visitar site <ArrowUpRight size={15} /></a></div></article></div><small className="connections-note">As conexões são apresentadas de forma institucional, sem declaração de parceria comercial ou relação de cliente nesta página.</small></div></section>
 
@@ -116,7 +118,7 @@ export default function Home() {
         <section className="section contact-section"><div className="wrap"><div className="contact-box reveal"><div className="contact-copy"><span className="section-kicker">diagnóstico inicial</span><h2>Quero entender<br /><em>onde melhorar.</em></h2><p>Conte o essencial da empresa. A Cenvara usa os dados somente para responder ao pedido e abrir a conversa de atendimento.</p></div><div className="contact-actions"><LeadQualificationForm /></div></div></div></section>
       </main>
 
-      <footer className="site-footer"><div className="wrap footer-inner"><Brand href="#top" /><span>Clareza para decidir. Estrutura para avançar.</span><a href="/politica-de-privacidade">Política de Privacidade</a><a href={whatsappUrl()} target="_blank" rel="noreferrer">+55 11 96929-3429 <ArrowUpRight size={14} /></a></div></footer>
+      <SiteFooter contactMessage={WHATSAPP_MESSAGE} />
     </div>
   );
 }

@@ -29,7 +29,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build production files
-        run: pnpm exec vite build
+        run: pnpm run build:firebase
 
       - name: Deploy Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
