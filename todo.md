@@ -41,4 +41,43 @@
 - [ ] Eliminar a tela em branco reproduzida no navegador do usuário.
 - [x] Criar sitemap e regras de rastreamento para as rotas públicas.
 - [x] Revisar metadados, canonicals e dados estruturados para indexação orgânica.
-- [ ] Preparar instruções de envio do sitemap ao Google Search Console.
+- [x] Preparar instruções de envio do sitemap ao Google Search Console.
+- [ ] Diferenciar a marca TMF da TMF Group nos títulos, descrições e dados estruturados.
+- [ ] Definir localização e frase distintiva para as buscas locais e de especialidade.
+- [ ] Pesquisar e recomendar um nome de consultoria mais distintivo que TMF.
+- [ ] Verificar concorrência pública do nome JR Consultoria.
+- [ ] Comparar opções inovadoras de nome e risco de colisão em buscas.
+- [ ] Definir plano de SEO técnico, conteúdo e autoridade orgânica.
+- [x] Consolidar estratégia de nome e SEO para aprovação do usuário.
+- [ ] Detalhar arquitetura de marca e identidade visual de Cenvara.
+- [x] Criar guia detalhado de conceito e aplicação visual de Cenvara.
+- [ ] Estruturar plano de SEO técnico, conteúdo e autoridade da Cenvara.
+- [ ] Criar roteiro comercial e pitch de vendas da Cenvara.
+- [x] Preparar roteiro integrado de SEO técnico e pitch comercial da Cenvara.
+- [x] Criar símbolo visual CVA para a marca Cenvara.
+- [x] Migrar todas as referências públicas de TMF para Cenvara.
+- [x] Atualizar SEO, sitemap, privacidade e dados estruturados para a nova marca.
+- [x] Aplicar identidade Cenvara às telas, mensagens, consentimento e metadados de SEO.
+- [x] Validar a publicação Cenvara no Firebase.
+- [x] Substituir o símbolo CVA externo por versão vetorial compatível com Firebase.
+- [ ] Reforçar a seção de depoimentos para receber relatos reais autorizados.
+- [ ] Implementar validação de formulário em tempo real com feedback acessível.
+- [ ] Aprimorar rolagem e hover dos botões de serviço.
+- [ ] Publicar os seis depoimentos fornecidos no carrossel Cenvara.
+- [ ] Definir e conectar um domínio público compatível com a marca Cenvara.
+- [ ] Atualizar canonical, sitemap e Search Console após a troca de domínio.
+- [ ] Criar novo projeto Firebase gratuito para o endereço Cenvara.
+- [ ] Migrar o deploy automático e o SEO para o novo subdomínio `.web.app`.
+- [x] Confirmar o projeto Firebase gratuito `cenvara-consultoria`.
+- [ ] Inicializar Hosting e criar a conta de serviço do GitHub Actions no projeto Cenvara.
+- [ ] Confirmar que `cenvara-consultoria.web.app` está online com o site da Cenvara.
+- [x] Criar e registrar o secret `FIREBASE_SERVICE_ACCOUNT_CENVARA_CONSULTORIA` no GitHub.
+- [x] Atualizar workflow, SEO técnico e configuração Firebase para `cenvara-consultoria`.
+- [x] Inserir os seis depoimentos fornecidos pelo usuário no carrossel Cenvara.
+- [x] Substituir as referências TMF dos depoimentos por Cenvara.
+- [ ] Adicionar seção de oportunidade de marca, visão, missão e valores da Cenvara.
+- [x] Adicionar seção de oportunidade de marca, visão, missão e valores da Cenvara.
+- [ ] Publicar e validar a nova seção institucional no Firebase.
+- [x] Implementar validação imediata de formulário e microinterações de rolagem e serviço.
+- [x] Confirmar que `cenvara-consultoria.web.app` está online com o site da Cenvara.
+- [x] Manter as URLs Firebase atuais até o registro de um domínio próprio Cenvara.
