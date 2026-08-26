@@ -17,6 +17,13 @@
         ]
       }
     ],
+    "redirects": [
+      {
+        "source": "/tmfconsultoria/assets/:path*",
+        "destination": "/assets/:path*",
+        "type": 301
+      }
+    ],
     "rewrites": [
       {
         "source": "**",
