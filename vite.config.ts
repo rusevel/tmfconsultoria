@@ -206,8 +206,8 @@ function vitePluginStorageProxy(): Plugin {
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
 
 export default defineConfig({
-  // GitHub Pages publishes this repository under /tmfconsultoria/; local/Manus stays at /.
-  base: process.env.GITHUB_ACTIONS ? "/tmfconsultoria/" : "/",
+  // Firebase Hosting serves this SPA from the domain root, including builds created in GitHub Actions.
+  base: "/",
   plugins,
   resolve: {
     alias: {
