@@ -112,11 +112,14 @@
 - [x] Documentar no repositório a avaliação do kit de identidade visual, distinguindo SVGs leves e tokens CSS de snapshots, JavaScript, CSS de auditoria e PNGs pesados.
 - [x] Registrar explicitamente a decisão de não publicar diretamente os arquivos pesados do kit no Firebase.
 
-- [ ] Adicionar o Facebook oficial da Cenvara ao rodapé e aos pontos institucionais com abertura segura.
-- [ ] Registrar e testar o evento de clique do Facebook sem enviar dados pessoais ao Analytics.
+- [x] Adicionar o Facebook oficial da Cenvara ao rodapé com abertura segura.
+- [x] Registrar e testar o evento de clique do Facebook sem enviar dados pessoais ao Analytics.
 
-- [ ] Adicionar o LinkedIn oficial da Cenvara ao rodapé com abertura segura.
-- [ ] Registrar e testar o evento de clique do LinkedIn no Analytics consentido.
+- [x] Adicionar o LinkedIn oficial da Cenvara ao rodapé com abertura segura.
+- [x] Registrar e testar o evento de clique do LinkedIn no Analytics consentido.
 
-- [ ] Adicionar o Pinterest oficial da Cenvara ao rodapé com abertura segura.
-- [ ] Registrar e testar o evento de clique do Pinterest no Analytics consentido.
+- [x] Adicionar o Pinterest oficial da Cenvara ao rodapé com abertura segura.
+- [x] Registrar e testar o evento de clique do Pinterest no Analytics consentido.
+
+- [x] Adicionar o Instagram oficial da Cenvara ao rodapé com abertura segura.
+- [x] Registrar e testar o evento de clique do Instagram no Analytics consentido.

@@ -11,6 +11,7 @@ const blogPage = readFileSync(resolve(projectRoot, "client/blog/index.html"), "u
 const blogComponent = readFileSync(resolve(projectRoot, "client/src/pages/Blog.tsx"), "utf8");
 const sitemap = readFileSync(resolve(projectRoot, "client/public/sitemap.xml"), "utf8");
 const form = readFileSync(resolve(projectRoot, "client/src/components/LeadQualificationForm.tsx"), "utf8");
+const analytics = readFileSync(resolve(projectRoot, "client/src/lib/analytics.ts"), "utf8");
 
 describe("metadados institucionais da Cenvara", () => {
   it("declara São Paulo, SP no SEO e nos dados estruturados", () => {
@@ -46,6 +47,10 @@ describe("metadados institucionais da Cenvara", () => {
     expect(footer).toContain('linkedin_click');
     expect(footer).toContain("pin.it/2KEwvnz2X");
     expect(footer).toContain('pinterest_click');
+    expect(footer).toContain("instagram.com/cenvaraconsult");
+    expect(footer).toContain('instagram_click');
+    expect(analytics).toContain('cenvara-analytics-consent');
+    expect(analytics).toContain('!== "granted"');
     expect(footer).toContain('rel="noopener noreferrer"');
     expect(form).toContain('role="status"');
     expect(form).toContain("successRef");
