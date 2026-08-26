@@ -47,11 +47,12 @@ export default function Home() {
           <nav className="desktop-nav" aria-label="Navegação principal">
             <a href="#solucoes">Áreas de atuação</a>
             <a href="#processo">Método</a>
+            <a href="#essencia">Essência</a>
             <a href="#duvidas">Dúvidas</a>
             <a className="nav-cta" href={whatsappUrl("Quero agendar um diagnóstico fiscal.")} target="_blank" rel="noreferrer">Agendar diagnóstico <ArrowUpRight size={15} /></a>
           </nav>
           <button className="mobile-menu-toggle" type="button" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen} aria-controls="mobile-nav" onClick={() => setMenuOpen((open) => !open)}>{menuOpen ? <X size={21} /> : <Menu size={21} />}</button>
-          {menuOpen && <nav id="mobile-nav" className="mobile-nav" aria-label="Navegação mobile"><a href="#solucoes" onClick={() => setMenuOpen(false)}>Áreas de atuação</a><a href="#processo" onClick={() => setMenuOpen(false)}>Método</a><a href="#duvidas" onClick={() => setMenuOpen(false)}>Dúvidas</a><a className="nav-cta" href={whatsappUrl("Quero agendar um diagnóstico fiscal.")} target="_blank" rel="noreferrer">Agendar diagnóstico <ArrowUpRight size={15} /></a></nav>}
+          {menuOpen && <nav id="mobile-nav" className="mobile-nav" aria-label="Navegação mobile"><a href="#solucoes" onClick={() => setMenuOpen(false)}>Áreas de atuação</a><a href="#processo" onClick={() => setMenuOpen(false)}>Método</a><a href="#essencia" onClick={() => setMenuOpen(false)}>Essência</a><a href="#duvidas" onClick={() => setMenuOpen(false)}>Dúvidas</a><a className="nav-cta" href={whatsappUrl("Quero agendar um diagnóstico fiscal.")} target="_blank" rel="noreferrer">Agendar diagnóstico <ArrowUpRight size={15} /></a></nav>}
         </div>
       </header>
 
@@ -102,6 +103,8 @@ export default function Home() {
         </section>
 
         <section id="processo" className="section process-section"><div className="wrap process-wrap"><div className="section-heading reveal"><span className="section-kicker">nosso método</span><h2>Da complexidade<br /><span>à decisão segura.</span></h2></div><div className="process-list"><article className="process-row reveal"><span>01</span><div><h3>Diagnosticar</h3><p>Analisamos contexto, regime, operação, prioridades e pontos de atenção.</p></div><ArrowUpRight size={20} /></article><article className="process-row reveal"><span>02</span><div><h3>Priorizar</h3><p>Organizamos oportunidades e riscos para você saber o que merece atenção primeiro.</p></div><ArrowUpRight size={20} /></article><article className="process-row reveal"><span>03</span><div><h3>Implementar</h3><p>Você recebe uma direção prática para avançar com responsabilidade e acompanhamento.</p></div><ArrowUpRight size={20} /></article></div></div></section>
+
+        <section id="essencia" className="section essence-section"><div className="wrap essence-layout"><div className="essence-intro reveal"><span className="section-kicker">essência Cenvara</span><h2>Uma marca criada para <span>organizar direção.</span></h2><p>Cenvara representa o centro da decisão, a leitura das variações de cada empresa e a direção que transforma informação em próximo passo.</p><div className="essence-mark" aria-hidden="true"><span>C</span><i /> <span>V</span><i /> <span>A</span></div></div><div className="essence-content"><article className="essence-opportunity reveal"><span className="card-number">oportunidade de marca</span><h3>Há espaço para uma consultoria que começa pelo cenário, não pela promessa.</h3><p>Empresas lidam com dados fiscais, contábeis, tecnológicos e comerciais que raramente conversam entre si. A Cenvara ocupa esse ponto de integração: mapear riscos, avaliar oportunidades legais e dar clareza à decisão da gestão.</p></article><div className="essence-cards"><article className="essence-card reveal"><span>01</span><h3>Visão</h3><p>Ser referência para empresas que buscam decisões mais claras, responsáveis e estruturadas.</p></article><article className="essence-card reveal"><span>02</span><h3>Missão</h3><p>Transformar complexidade fiscal, contábil, tecnológica e comercial em direção prática para a gestão.</p></article><article className="essence-card essence-values reveal"><span>03</span><h3>Valores</h3><p>Responsabilidade técnica, clareza aplicável, contexto antes da recomendação e parceria próxima.</p></article></div></div></div></section>
 
         <TestimonialCarousel testimonials={authorizedTestimonials} />
 
