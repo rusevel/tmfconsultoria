@@ -1,4 +1,5 @@
 /* Cenvara app shell: global layers stay dark, quiet and consistent while routes remain direct and accessible. */
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AnalyticsConsent } from "@/components/AnalyticsConsent";
@@ -35,6 +36,13 @@ function Router() {
 function AnimatedRouter() {
   const [location] = useLocation();
   const reduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      document.querySelectorAll<HTMLElement>(".reveal").forEach((element) => element.classList.add("show"));
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [location]);
   const scene = reduceMotion
     ? { initial: false, animate: { opacity: 1 }, exit: { opacity: 1 } }
     : { initial: { opacity: 0, y: 10 }, animate: { opacity: 1, y: 0 }, exit: { opacity: 0, y: -8 } };

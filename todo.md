@@ -187,12 +187,15 @@
 - [x] Adicionar formulário de contato rápido ao final de /casos-de-sucesso com validação e consentimento LGPD.
 - [x] Cobrir as melhorias com testes automatizados e validação visual desktop/mobile. (6 testes no clone GitHub; páginas verificadas em desktop.)
 
-- [ ] Corrigir a área preta superior da página /apresentacao e garantir que o primeiro conteúdo apareça no topo.
-- [ ] Auditar e traduzir textos visíveis em inglês para português brasileiro.
-- [ ] Adicionar botão flutuante Voltar ao Topo em /apresentacao e /casos-de-sucesso.
-- [ ] Criar e publicar imagem institucional otimizada para og:image nas novas páginas.
-- [ ] Validar visual, idioma, SEO/Open Graph, responsividade e deploy.
+- [x] Corrigir a área preta superior da página /apresentacao e garantir que o primeiro conteúdo apareça no topo.
+- [x] Auditar e traduzir textos visíveis em inglês para português brasileiro.
+- [x] Adicionar botão flutuante Voltar ao Topo em /apresentacao e /casos-de-sucesso.
+- [x] Criar e publicar imagem institucional otimizada para og:image nas novas páginas.
+- [x] Validar visual, idioma, SEO/Open Graph, responsividade e deploy.
 
-- [ ] Corrigir a URL og:image, pois o caminho manus-storage está retornando index.html no Firebase.
-- [ ] Gerar uma imagem institucional estática otimizada em 1200x630 e incluí-la no build público.
-- [ ] Reexecutar o deploy e confirmar Content-Type image/jpeg na imagem Open Graph.
+- [x] Corrigir a URL og:image, pois o caminho manus-storage está retornando index.html no Firebase.
+- [x] Gerar uma imagem institucional estática otimizada em 1200x630 e incluí-la no build público.
+- [x] Reexecutar o deploy e confirmar Content-Type image/jpeg na imagem Open Graph.
+- [x] Corrigir a rota pública `/casos-de-sucesso/` que estava exibindo conteúdo invisível no Firebase; a página existe e agora revela o conteúdo também fora da Home.
+- [x] Reposicionar o botão “Voltar ao Topo” para ficar ao lado do WhatsApp, sem sobreposição em desktop e mobile.
+- [x] Esclarecer e aprimorar o fluxo do formulário de Casos de Sucesso: manter a captação, incluir assunto principal e informar que a continuidade ocorre no WhatsApp, sem página separada obrigatória.

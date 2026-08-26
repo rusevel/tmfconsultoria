@@ -88,7 +88,7 @@ describe("metadados institucionais da Cenvara", () => {
     expect(footer).toContain('rel="noopener noreferrer"');
     expect(form).toContain('role="status"');
     expect(form).toContain("successRef");
-    expect(form).toContain("Solicitação preparada.");
+    expect(form).toContain("Contato preparado.");
   });
 
   it("mantém Rusevel Barros como CEO & CTO na apresentação institucional", () => {

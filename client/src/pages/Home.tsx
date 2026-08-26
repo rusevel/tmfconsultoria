@@ -22,7 +22,7 @@ const authorizedTestimonials = [
   { quote: "Mais organização e segurança para decidir. Precisávamos entender melhor nossa situação e identificar onde poderíamos melhorar. A Cenvara fez uma análise completa e apresentou as informações de maneira simples e objetiva.", name: "Rafael Almeida", role: "Diretor Comercial" },
   { quote: "Profissionalismo do início ao fim. Desde o primeiro contato, fomos muito bem atendidos. A equipe demonstrou conhecimento, organização e preocupação em entender nossas necessidades.", name: "Fernanda Costa", role: "Empresária" },
   { quote: "Uma consultoria que realmente entende a empresa. A Cenvara não ficou apenas na teoria. Entenderam nossos desafios e apresentaram caminhos possíveis para melhorar nossa operação.", name: "Lucas Ferreira", role: "Sócio-Administrador" },
-  { quote: "Clareza para tomar decisões melhores. Antes da consultoria, tínhamos muitas informações, mas pouca clareza sobre o que realmente precisava ser priorizado. A análise da TMF ajudou a organizar as ideias e identificar oportunidades de melhoria.", name: "Patrícia Santos", role: "Empresária" },
+  { quote: "Clareza para tomar decisões melhores. Antes da consultoria, tínhamos muitas informações, mas pouca clareza sobre o que realmente precisava ser priorizado. A análise da Cenvara ajudou a organizar as ideias e identificar oportunidades de melhoria.", name: "Patrícia Santos", role: "Empresária" },
 ];
 
 export default function Home() {

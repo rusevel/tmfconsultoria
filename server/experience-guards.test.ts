@@ -6,6 +6,8 @@ const root = resolve(import.meta.dirname, "..");
 const app = readFileSync(resolve(root, "client/src/App.tsx"), "utf8");
 const styles = readFileSync(resolve(root, "client/src/index.css"), "utf8");
 const header = readFileSync(resolve(root, "client/src/components/SiteHeader.tsx"), "utf8");
+const form = readFileSync(resolve(root, "client/src/components/LeadQualificationForm.tsx"), "utf8");
+const home = readFileSync(resolve(root, "client/src/pages/Home.tsx"), "utf8");
 
 describe("guardas de experiência Cenvara", () => {
   it("desativa transições de rota para preferência de movimento reduzido", () => {
@@ -19,5 +21,20 @@ describe("guardas de experiência Cenvara", () => {
     expect(header).toContain('type="button"');
     expect(header).toContain("aria-expanded");
     expect(header).toContain('aria-controls="mobile-nav"');
+  });
+
+  it("revela conteúdo também nas rotas secundárias e separa os botões fixos", () => {
+    expect(app).toContain('document.querySelectorAll<HTMLElement>(".reveal")');
+    expect(app).toContain('classList.add("show")');
+    expect(styles).toContain(".back-to-top{position:fixed;right:101px");
+    expect(styles).toContain("@media (max-width:600px){.back-to-top{right:83px");
+  });
+
+  it("explica o fluxo de captação e mantém a marca atual nos depoimentos", () => {
+    expect(form).toContain("Captação rápida.");
+    expect(form).toContain("Assunto principal");
+    expect(form).toContain("nenhuma página separada é necessária");
+    expect(form).toContain("Assunto principal: ${form.challenge}");
+    expect(home).not.toContain("TMF");
   });
 });
