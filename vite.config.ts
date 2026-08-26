@@ -221,6 +221,13 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        home: path.resolve(import.meta.dirname, "client", "index.html"),
+        consultoriaTributaria: path.resolve(import.meta.dirname, "client", "consultoria-tributaria", "index.html"),
+        consultoriaFiscal: path.resolve(import.meta.dirname, "client", "consultoria-fiscal", "index.html"),
+      },
+    },
   },
   server: {
     port: 3000,

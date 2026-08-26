@@ -38,3 +38,7 @@
 - [x] Adicionar autoplay e indicadores ao carrossel de depoimentos autorizados.
 - [x] Exibir confirmação animada e limpar o formulário após envio.
 - [x] Criar e vincular a página de Política de Privacidade.
+- [ ] Eliminar a tela em branco reproduzida no navegador do usuário.
+- [x] Criar sitemap e regras de rastreamento para as rotas públicas.
+- [x] Revisar metadados, canonicals e dados estruturados para indexação orgânica.
+- [ ] Preparar instruções de envio do sitemap ao Google Search Console.
