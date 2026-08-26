@@ -7,6 +7,10 @@ const publicHead = readFileSync(resolve(projectRoot, "client/index.html"), "utf8
 const homePage = readFileSync(resolve(projectRoot, "client/src/pages/Home.tsx"), "utf8");
 const tributaryPage = readFileSync(resolve(projectRoot, "client/consultoria-tributaria/index.html"), "utf8");
 const fiscalPage = readFileSync(resolve(projectRoot, "client/consultoria-fiscal/index.html"), "utf8");
+const blogPage = readFileSync(resolve(projectRoot, "client/blog/index.html"), "utf8");
+const blogComponent = readFileSync(resolve(projectRoot, "client/src/pages/Blog.tsx"), "utf8");
+const sitemap = readFileSync(resolve(projectRoot, "client/public/sitemap.xml"), "utf8");
+const form = readFileSync(resolve(projectRoot, "client/src/components/LeadQualificationForm.tsx"), "utf8");
 
 describe("metadados institucionais da Cenvara", () => {
   it("declara São Paulo, SP no SEO e nos dados estruturados", () => {
@@ -20,6 +24,24 @@ describe("metadados institucionais da Cenvara", () => {
     expect(tributaryPage).toContain('"serviceType":"Consultoria tributária"');
     expect(fiscalPage).toContain('"@type":"Service"');
     expect(fiscalPage).toContain('"serviceType":"Consultoria fiscal"');
+  });
+
+  it("publica o Caderno Cenvara com descoberta técnica e editorial", () => {
+    expect(blogPage).toContain("Artigos fiscais e tecnológicos");
+    expect(blogPage).toContain('rel="canonical"');
+    expect(blogComponent).toContain("Caderno Cenvara");
+    expect(blogComponent).toContain("Agosto de 2026");
+    expect(sitemap).toContain("https://cenvara-consultoria.web.app/blog");
+  });
+
+  it("mantém contato global e confirmação acessível do formulário", () => {
+    const app = readFileSync(resolve(projectRoot, "client/src/App.tsx"), "utf8");
+    const floatingWhatsApp = readFileSync(resolve(projectRoot, "client/src/components/FloatingWhatsApp.tsx"), "utf8");
+    expect(app).toContain("<FloatingWhatsApp />");
+    expect(floatingWhatsApp).toContain("whatsapp_float_click");
+    expect(form).toContain('role="status"');
+    expect(form).toContain("successRef");
+    expect(form).toContain("Solicitação preparada.");
   });
 
   it("mantém Rusevel Barros como CEO & CTO na apresentação institucional", () => {

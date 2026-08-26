@@ -1,5 +1,5 @@
 /* Cenvara lead layer: field-level validation is immediate, legible and never sends personal data to analytics. */
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { ArrowUpRight, Check, Mail } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 import { whatsappUrl } from "@/lib/whatsapp";
@@ -31,6 +31,11 @@ export function LeadQualificationForm() {
   const [touched, setTouched] = useState<Partial<Record<LeadField, boolean>>>({});
   const [errors, setErrors] = useState<LeadErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const successRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (submitted) successRef.current?.focus();
+  }, [submitted]);
 
   function update<K extends LeadField>(field: K, value: LeadForm[K]) {
     const next = { ...form, [field]: value } as LeadForm;
@@ -82,6 +87,6 @@ export function LeadQualificationForm() {
     <div className="field-messages lead-grid"><span id="size-error" role="alert">{errors.size}</span><span id="challenge-error" role="alert">{errors.challenge}</span></div>
     <label className={`lgpd-consent ${inputState("consent")}`}><input type="checkbox" checked={form.consent} onChange={(event) => update("consent", event.target.checked)} onBlur={() => validateOnBlur("consent")} aria-invalid={Boolean(errors.consent)} aria-describedby={describedBy("consent")} /><span>Autorizo a Cenvara a usar estes dados exclusivamente para responder ao meu pedido e iniciar o atendimento pelo WhatsApp. Consulte a <a href="/politica-de-privacidade">Política de Privacidade</a>.</span></label><span className="field-message" id="consent-error" role="alert">{errors.consent}</span>
     <button type="submit" className="lead-submit"><Check size={17} /> Solicitar diagnóstico <ArrowUpRight size={16} /></button>
-    {submitted && <div className="form-success" role="status" aria-live="polite"><span><Check size={17} /></span><div><strong>Dados preparados com sucesso.</strong><small>Os campos foram limpos. Finalize o contato na conversa do WhatsApp.</small></div></div>}
+    {submitted && <div ref={successRef} className="form-success" role="status" aria-live="polite" tabIndex={-1}><span className="form-success-icon"><Check size={17} /></span><div><strong>Solicitação preparada.</strong><small>Seus dados foram validados e os campos foram limpos. A conversa do WhatsApp foi aberta para você concluir o contato.</small></div><span className="form-success-step">01 / 01</span></div>}
   </form>;
 }

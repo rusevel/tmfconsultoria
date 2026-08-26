@@ -1,58 +1,58 @@
 # Evolução do site TMF e publicação no Samsung via Termux
 
-- [ ] Trocar a marca ALTA por TMF — Tecnologia, Marketing e Fiscal Consultoria.
-- [ ] Criar a rota /consultoria-tributaria com conteúdo, metadados e schema próprios.
-- [ ] Criar a rota /consultoria-fiscal com conteúdo, metadados e schema próprios.
-- [ ] Auditar componentes, estados e repetições atuais.
-- [ ] Criar componentes reutilizáveis para cabeçalho, CTAs, cards e rodapé.
-- [ ] Implementar navegação suave, FAQ acessível e estados de foco/hover.
-- [ ] Adicionar transições de entrada e saída entre as páginas de serviço.
-- [ ] Validar animações com preferência de movimento reduzido.
-- [ ] Validar e-mail com feedback visual antes de abrir o WhatsApp.
-- [ ] Testar desktop, mobile, teclado e build de produção.
-- [ ] Adicionar links internos, sitemap e validação das duas rotas.
-- [ ] Atualizar wordmark, título, SEO, descrições e endereço do site.
-- [ ] Redefinir a proposta de valor para consultoria tributária, contábil, fiscal, marketing e TI.
-- [ ] Criar copy de alta conversão sem prometer economia tributária garantida.
-- [ ] Adicionar SEO técnico e palavras-chave orientadas à intenção de busca.
-- [ ] Implementar CTA de diagnóstico e formulário de qualificação.
-- [ ] Gerar ou confirmar a pasta de produção do site.
-- [ ] Transferir os arquivos de produção para o diretório do Termux.
-- [ ] Iniciar o servidor web local e testar pela rede Wi-Fi.
-- [ ] Instalar e configurar um túnel HTTPS para acesso externo.
-- [ ] Escolher e configurar um subdomínio gratuito ou domínio próprio.
-- [ ] Configurar inicialização automática e impedir suspensão do Termux.
-- [ ] Testar WhatsApp, formulário de e-mail e acesso externo.
-- [ ] Sincronizar a versão atualizada com a cópia usada para Firebase.
-- [ ] Gerar o build e publicar a atualização no Firebase Hosting.
-- [ ] Restaurar o conteúdo de produção no Firebase após conferir os arquivos extraídos.
-- [ ] Criar um comando automatizado de build e deploy com validação de arquivos.
-- [ ] Configurar GitHub Actions para publicar o Firebase após alterações na branch main.
-- [ ] Criar carrossel institucional pronto para depoimentos reais autorizados.
-- [ ] Adicionar hover, brilho e sombras dinâmicas aos cards de serviço.
-- [ ] Exibir botão flutuante de WhatsApp em todas as rotas.
-- [ ] Configurar eventos GA4 para WhatsApp e qualificação de lead.
-- [ ] Criar formulário de qualificação com consentimento obrigatório da LGPD.
-- [ ] Inserir depoimentos reais autorizados quando forem fornecidos.
+- [x] Trocar a marca ALTA por TMF — Tecnologia, Marketing e Fiscal Consultoria. (Etapa histórica concluída e sucedida pela marca Cenvara.)
+- [x] Criar a rota /consultoria-tributaria com conteúdo, metadados e schema próprios.
+- [x] Criar a rota /consultoria-fiscal com conteúdo, metadados e schema próprios.
+- [x] Auditar componentes, estados e repetições atuais.
+- [x] Criar componentes reutilizáveis para cabeçalho, CTAs, cards e rodapé.
+- [x] Implementar navegação suave, FAQ acessível e estados de foco/hover.
+- [x] Adicionar transições de entrada e saída entre as páginas de serviço.
+- [x] Validar animações com preferência de movimento reduzido.
+- [x] Validar e-mail com feedback visual antes de abrir o WhatsApp.
+- [x] Testar desktop, mobile, teclado e build de produção.
+- [x] Adicionar links internos, sitemap e validação das duas rotas.
+- [x] Atualizar wordmark, título, SEO, descrições e endereço do site.
+- [x] Redefinir a proposta de valor para consultoria tributária, contábil, fiscal, marketing e TI.
+- [x] Criar copy de alta conversão sem prometer economia tributária garantida.
+- [x] Adicionar SEO técnico e palavras-chave orientadas à intenção de busca.
+- [x] Implementar CTA de diagnóstico e formulário de qualificação.
+- [x] Gerar ou confirmar a pasta de produção do site.
+- [x] Transferir os arquivos de produção para o diretório do Termux. (Encerrado: a publicação foi substituída pelo Firebase Hosting.)
+- [x] Iniciar o servidor web local e testar pela rede Wi-Fi. (Encerrado: a publicação foi substituída pelo Firebase Hosting.)
+- [x] Instalar e configurar um túnel HTTPS para acesso externo. (Encerrado: a publicação foi substituída pelo Firebase Hosting.)
+- [x] Escolher e configurar um subdomínio gratuito ou domínio próprio.
+- [x] Configurar inicialização automática e impedir suspensão do Termux. (Encerrado: a publicação foi substituída pelo Firebase Hosting.)
+- [x] Testar WhatsApp, formulário de e-mail e acesso externo.
+- [x] Sincronizar a versão atualizada com a cópia usada para Firebase.
+- [x] Gerar o build e publicar a atualização no Firebase Hosting.
+- [x] Restaurar o conteúdo de produção no Firebase após conferir os arquivos extraídos. (Encerrado: pipeline automatizado passou a publicar a versão validada.)
+- [x] Criar um comando automatizado de build e deploy com validação de arquivos.
+- [x] Configurar GitHub Actions para publicar o Firebase após alterações na branch main.
+- [x] Criar carrossel institucional pronto para depoimentos reais autorizados.
+- [x] Adicionar hover, brilho e sombras dinâmicas aos cards de serviço.
+- [x] Exibir botão flutuante de WhatsApp em todas as rotas.
+- [x] Configurar eventos GA4 para WhatsApp e qualificação de lead.
+- [x] Criar formulário de qualificação com consentimento obrigatório da LGPD.
+- [x] Inserir depoimentos reais autorizados quando forem fornecidos.
 - [x] Corrigir a tela em branco e validar os arquivos servidos pelo Firebase.
 - [x] Adicionar autoplay e indicadores ao carrossel de depoimentos autorizados.
 - [x] Exibir confirmação animada e limpar o formulário após envio.
 - [x] Criar e vincular a página de Política de Privacidade.
-- [ ] Eliminar a tela em branco reproduzida no navegador do usuário.
+- [x] Eliminar a tela em branco reproduzida no navegador do usuário.
 - [x] Criar sitemap e regras de rastreamento para as rotas públicas.
 - [x] Revisar metadados, canonicals e dados estruturados para indexação orgânica.
 - [x] Preparar instruções de envio do sitemap ao Google Search Console.
-- [ ] Diferenciar a marca TMF da TMF Group nos títulos, descrições e dados estruturados.
-- [ ] Definir localização e frase distintiva para as buscas locais e de especialidade.
-- [ ] Pesquisar e recomendar um nome de consultoria mais distintivo que TMF.
-- [ ] Verificar concorrência pública do nome JR Consultoria.
-- [ ] Comparar opções inovadoras de nome e risco de colisão em buscas.
-- [ ] Definir plano de SEO técnico, conteúdo e autoridade orgânica.
+- [x] Diferenciar a marca TMF da TMF Group nos títulos, descrições e dados estruturados.
+- [x] Definir localização e frase distintiva para as buscas locais e de especialidade.
+- [x] Pesquisar e recomendar um nome de consultoria mais distintivo que TMF.
+- [x] Verificar concorrência pública do nome JR Consultoria. (Encerrado após a definição da marca Cenvara.)
+- [x] Comparar opções inovadoras de nome e risco de colisão em buscas.
+- [x] Definir plano de SEO técnico, conteúdo e autoridade orgânica.
 - [x] Consolidar estratégia de nome e SEO para aprovação do usuário.
-- [ ] Detalhar arquitetura de marca e identidade visual de Cenvara.
+- [x] Detalhar arquitetura de marca e identidade visual de Cenvara.
 - [x] Criar guia detalhado de conceito e aplicação visual de Cenvara.
-- [ ] Estruturar plano de SEO técnico, conteúdo e autoridade da Cenvara.
-- [ ] Criar roteiro comercial e pitch de vendas da Cenvara.
+- [x] Estruturar plano de SEO técnico, conteúdo e autoridade da Cenvara.
+- [x] Criar roteiro comercial e pitch de vendas da Cenvara.
 - [x] Preparar roteiro integrado de SEO técnico e pitch comercial da Cenvara.
 - [x] Criar símbolo visual CVA para a marca Cenvara.
 - [x] Migrar todas as referências públicas de TMF para Cenvara.
@@ -60,24 +60,52 @@
 - [x] Aplicar identidade Cenvara às telas, mensagens, consentimento e metadados de SEO.
 - [x] Validar a publicação Cenvara no Firebase.
 - [x] Substituir o símbolo CVA externo por versão vetorial compatível com Firebase.
-- [ ] Reforçar a seção de depoimentos para receber relatos reais autorizados.
-- [ ] Implementar validação de formulário em tempo real com feedback acessível.
-- [ ] Aprimorar rolagem e hover dos botões de serviço.
-- [ ] Publicar os seis depoimentos fornecidos no carrossel Cenvara.
-- [ ] Definir e conectar um domínio público compatível com a marca Cenvara.
-- [ ] Atualizar canonical, sitemap e Search Console após a troca de domínio.
-- [ ] Criar novo projeto Firebase gratuito para o endereço Cenvara.
-- [ ] Migrar o deploy automático e o SEO para o novo subdomínio `.web.app`.
+- [x] Reforçar a seção de depoimentos para receber relatos reais autorizados.
+- [x] Implementar validação de formulário em tempo real com feedback acessível.
+- [x] Aprimorar rolagem e hover dos botões de serviço.
+- [x] Publicar os seis depoimentos fornecidos no carrossel Cenvara.
+- [x] Definir e conectar um domínio público compatível com a marca Cenvara.
+- [x] Atualizar canonical e sitemap após a troca de domínio. (A etapa de Search Console permanece registrada separadamente como pendência externa.)
+- [x] Criar novo projeto Firebase gratuito para o endereço Cenvara.
+- [x] Migrar o deploy automático e o SEO para o novo subdomínio `.web.app`.
 - [x] Confirmar o projeto Firebase gratuito `cenvara-consultoria`.
-- [ ] Inicializar Hosting e criar a conta de serviço do GitHub Actions no projeto Cenvara.
-- [ ] Confirmar que `cenvara-consultoria.web.app` está online com o site da Cenvara.
+- [x] Inicializar Hosting e criar a conta de serviço do GitHub Actions no projeto Cenvara.
+- [x] Confirmar que `cenvara-consultoria.web.app` está online com o site da Cenvara.
 - [x] Criar e registrar o secret `FIREBASE_SERVICE_ACCOUNT_CENVARA_CONSULTORIA` no GitHub.
 - [x] Atualizar workflow, SEO técnico e configuração Firebase para `cenvara-consultoria`.
 - [x] Inserir os seis depoimentos fornecidos pelo usuário no carrossel Cenvara.
 - [x] Substituir as referências TMF dos depoimentos por Cenvara.
-- [ ] Adicionar seção de oportunidade de marca, visão, missão e valores da Cenvara.
 - [x] Adicionar seção de oportunidade de marca, visão, missão e valores da Cenvara.
-- [ ] Publicar e validar a nova seção institucional no Firebase.
+- [x] Adicionar seção de oportunidade de marca, visão, missão e valores da Cenvara.
+- [x] Publicar e validar a nova seção institucional no Firebase.
 - [x] Implementar validação imediata de formulário e microinterações de rolagem e serviço.
 - [x] Confirmar que `cenvara-consultoria.web.app` está online com o site da Cenvara.
 - [x] Manter as URLs Firebase atuais até o registro de um domínio próprio Cenvara.
+
+- [x] Definir a cidade/estado principal de atendimento da Cenvara e aplicar essa localização em títulos, descrições, dados estruturados e estratégia local legítima.
+- [x] Verificar no Google Search Console a propriedade `https://cenvara-consultoria.web.app/`, enviar `sitemap.xml` e inspecionar as URLs principais após a validação do proprietário. (Home indexada; rotas de serviço aguardam rastreamento do Google.)
+- [x] Confirmar o build frontend e o deploy automático do commit `f82663c` no Firebase Hosting.
+- [x] Auditar publicamente a seção Conexões, o carrossel, a validação do formulário e a rota SEO tributária.
+
+- [x] Aplicar São Paulo, SP como base de atendimento em conteúdo, metadados e dados estruturados da Cenvara.
+- [x] Inserir Rusevel Barros como CEO & CTO nos elementos institucionais e estruturados pertinentes.
+- [x] Atualizar títulos e metadados locais da home e das páginas tributária e fiscal para refletir São Paulo, SP.
+- [x] Revalidar publicamente os títulos e metadados locais das rotas principais após o deploy.
+
+- [x] Incluir Jessica Carvalho como GFS, Gestora Fiscal Sênior, na seção institucional ao lado de Rusevel Barros.
+- [x] Redigir e publicar a biografia profissional de Jessica Carvalho, alinhada à trajetória com Rusevel Barros e à proposta fiscal e tecnológica da Cenvara.
+
+- [x] Adicionar JSON-LD específico às páginas tributária e fiscal e revalidar os HTMLs publicados.
+- [x] Documentar a auditoria de componentes, estados e repetições do frontend no repositório.
+- [x] Extrair cabeçalho, rodapé e cartões de liderança para componentes reutilizáveis reais.
+- [x] Executar e registrar testes de movimento reduzido, mobile, teclado e build de produção.
+- [x] Criar script de build e validação explícita dos arquivos gerados para o deploy Firebase.
+- [x] Registrar a pesquisa pública sobre JR Consultoria ou encerrar o item por mudança de marca com evidência.
+- [x] Revisar a biografia de Rusevel Barros a partir do currículo, destacando sua consultoria de tecnologia e sua atuação em soluções empresariais competitivas.
+- [x] Complementar a biografia de Jessica Carvalho com o currículo enviado, incluindo sua posição como sócia e cofundadora da Cenvara.
+
+- [ ] Criar seção de blog/artigos mensais com conteúdo fiscal e tecnológico.
+- [ ] Garantir botão flutuante do WhatsApp em todas as páginas e validar seus links.
+- [ ] Aprimorar a mensagem visual de confirmação do formulário após validação e envio.
+- [ ] Avaliar e documentar o uso seguro do kit de identidade visual enviado no site Firebase.
+- [ ] Adicionar a entrada dedicada do blog ao build Vite para servir seus metadados SEO na rota /blog.
