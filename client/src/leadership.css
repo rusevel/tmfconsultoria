@@ -1,4 +1,13 @@
+.essence-cards {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.essence-card {
+  grid-column: span 2;
+}
+
 .leadership-card {
+  grid-column: span 3;
   min-height: 300px;
   background: linear-gradient(150deg, rgba(49, 209, 124, 0.08), rgba(255, 255, 255, 0.022));
 }
@@ -14,4 +23,15 @@
 .leadership-card p strong {
   color: var(--brand-soft);
   font-weight: 800;
+}
+
+@media (max-width: 650px) {
+  .essence-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .essence-card,
+  .leadership-card {
+    grid-column: auto;
+  }
 }
