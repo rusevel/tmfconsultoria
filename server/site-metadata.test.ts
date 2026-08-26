@@ -37,8 +37,14 @@ describe("metadados institucionais da Cenvara", () => {
   it("mantém contato global e confirmação acessível do formulário", () => {
     const app = readFileSync(resolve(projectRoot, "client/src/App.tsx"), "utf8");
     const floatingWhatsApp = readFileSync(resolve(projectRoot, "client/src/components/FloatingWhatsApp.tsx"), "utf8");
+    const footer = readFileSync(resolve(projectRoot, "client/src/components/SiteFooter.tsx"), "utf8");
     expect(app).toContain("<FloatingWhatsApp />");
     expect(floatingWhatsApp).toContain("whatsapp_float_click");
+    expect(footer).toContain("61593543042320");
+    expect(footer).toContain('facebook_click');
+    expect(footer).toContain("cenvara-consult-33445a431");
+    expect(footer).toContain('linkedin_click');
+    expect(footer).toContain('rel="noopener noreferrer"');
     expect(form).toContain('role="status"');
     expect(form).toContain("successRef");
     expect(form).toContain("Solicitação preparada.");
