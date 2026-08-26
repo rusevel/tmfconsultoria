@@ -1,0 +1,17 @@
+.leadership-card {
+  min-height: 300px;
+  background: linear-gradient(150deg, rgba(49, 209, 124, 0.08), rgba(255, 255, 255, 0.022));
+}
+
+.leadership-card h3 {
+  margin-top: 28px;
+}
+
+.leadership-card p {
+  font-size: 0.77rem;
+}
+
+.leadership-card p strong {
+  color: var(--brand-soft);
+  font-weight: 800;
+}
