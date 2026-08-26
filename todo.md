@@ -104,8 +104,10 @@
 - [x] Revisar a biografia de Rusevel Barros a partir do currículo, destacando sua consultoria de tecnologia e sua atuação em soluções empresariais competitivas.
 - [x] Complementar a biografia de Jessica Carvalho com o currículo enviado, incluindo sua posição como sócia e cofundadora da Cenvara.
 
-- [ ] Criar seção de blog/artigos mensais com conteúdo fiscal e tecnológico.
-- [ ] Garantir botão flutuante do WhatsApp em todas as páginas e validar seus links.
-- [ ] Aprimorar a mensagem visual de confirmação do formulário após validação e envio.
-- [ ] Avaliar e documentar o uso seguro do kit de identidade visual enviado no site Firebase.
-- [ ] Adicionar a entrada dedicada do blog ao build Vite para servir seus metadados SEO na rota /blog.
+- [x] Criar seção de blog/artigos mensais com conteúdo fiscal e tecnológico.
+- [x] Garantir botão flutuante do WhatsApp em todas as páginas e validar seus links.
+- [x] Aprimorar a mensagem visual de confirmação do formulário após validação e envio.
+- [x] Avaliar e documentar o uso seguro do kit de identidade visual enviado no site Firebase.
+- [x] Adicionar a entrada dedicada do blog ao build Vite para servir seus metadados SEO na rota /blog.
+- [x] Documentar no repositório a avaliação do kit de identidade visual, distinguindo SVGs leves e tokens CSS de snapshots, JavaScript, CSS de auditoria e PNGs pesados.
+- [x] Registrar explicitamente a decisão de não publicar diretamente os arquivos pesados do kit no Firebase.
