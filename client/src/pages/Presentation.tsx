@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, Download, MessageCircle } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { BackToTop } from "@/components/BackToTop";
 import { trackEvent } from "@/lib/analytics";
 
 const deckUrl = "/deck-comercial-cenvara.pdf";
@@ -41,21 +42,22 @@ export default function Presentation() {
         <section className="presentation-intro section">
           <div className="wrap presentation-intro-grid">
             <div className="reveal"><a className="back-link" href="/"><ArrowLeft size={15} /> Voltar para a home</a><span className="section-kicker">apresentação comercial</span><h1>O centro da<br /><em>decisão.</em></h1><p>Explore a proposta da Cenvara em uma experiência interativa. Use as setas do teclado, os controles abaixo ou navegue pelos indicadores.</p></div>
-            <div className="presentation-actions reveal"><a className="button button-quiet" href={deckUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("deck_download", { placement: "presentation_page" })}><Download size={16} /> Baixar PDF completo</a><WhatsAppButton message="Quero conversar sobre a apresentação comercial da Cenvara."><MessageCircle size={16} /> Conversar com a Cenvara</WhatsAppButton></div>
+            <div className="presentation-side reveal"><div className="presentation-document"><span className="section-kicker">documento comercial</span><strong>Cenvara Fiscal & Estratégia</strong><p>Uma visão objetiva sobre contexto, método e próximos passos.</p><div><span>08 telas</span><span>PDF disponível</span></div></div><div className="presentation-actions"><a className="button button-quiet" href={deckUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("deck_download", { placement: "presentation_page" })}><Download size={16} /> Baixar PDF completo</a><WhatsAppButton message="Quero conversar sobre a apresentação comercial da Cenvara."><MessageCircle size={16} /> Conversar com a Cenvara</WhatsAppButton></div></div>
           </div>
         </section>
         <section className="interactive-deck-section section" aria-label="Deck comercial interativo">
           <div className="wrap">
-            <div className="deck-progress" aria-label={`Progresso da apresentação: slide ${active + 1} de ${slides.length}`}><span>Slide {current.number} / 08</span><div role="progressbar" aria-valuemin={1} aria-valuemax={slides.length} aria-valuenow={active + 1} aria-valuetext={`Slide ${active + 1} de ${slides.length}`}><i style={{ width: progress }} /></div><span>Use ← →</span></div>
+            <div className="deck-progress" aria-label={`Progresso da apresentação: tela ${active + 1} de ${slides.length}`}><span>Tela {current.number} / 08</span><div role="progressbar" aria-valuemin={1} aria-valuemax={slides.length} aria-valuenow={active + 1} aria-valuetext={`Tela ${active + 1} de ${slides.length}`}><i style={{ width: progress }} /></div><span>Use ← →</span></div>
             <div className="interactive-slide" key={current.number}>
               <div className="interactive-slide-copy"><span className="section-kicker">{current.eyebrow}</span><h2>{current.title}</h2><p>{current.body}</p>{active === slides.length - 1 && <WhatsAppButton message="Quero agendar um diagnóstico com a Cenvara.">Agendar diagnóstico</WhatsAppButton>}</div>
               <div className="interactive-slide-mark" aria-hidden="true"><span>{current.accent}</span><b>{current.number}</b></div>
             </div>
-            <div className="deck-controls"><button type="button" className="deck-arrow" onClick={() => goTo(active - 1)} disabled={active === 0} aria-label="Slide anterior"><ArrowLeft size={18} /></button><div className="deck-dots" role="tablist" aria-label="Selecionar slide">{slides.map((slide, index) => <button type="button" role="tab" aria-selected={index === active} aria-label={`Ir para o slide ${slide.number}`} className={index === active ? "active" : ""} onClick={() => goTo(index)} key={slide.number}><span>{slide.number}</span></button>)}</div><button type="button" className="deck-arrow" onClick={() => goTo(active + 1)} disabled={active === slides.length - 1} aria-label="Próximo slide"><ArrowRight size={18} /></button></div>
+            <div className="deck-controls"><button type="button" className="deck-arrow" onClick={() => goTo(active - 1)} disabled={active === 0} aria-label="Tela anterior"><ArrowLeft size={18} /></button><div className="deck-dots" role="tablist" aria-label="Selecionar tela">{slides.map((slide, index) => <button type="button" role="tab" aria-selected={index === active} aria-label={`Ir para a tela ${slide.number}`} className={index === active ? "active" : ""} onClick={() => goTo(index)} key={slide.number}><span>{slide.number}</span></button>)}</div><button type="button" className="deck-arrow" onClick={() => goTo(active + 1)} disabled={active === slides.length - 1} aria-label="Próxima tela"><ArrowRight size={18} /></button></div>
           </div>
         </section>
       </main>
       <SiteFooter contactMessage="Quero conversar sobre a apresentação da Cenvara." />
+      <BackToTop />
     </div>
   );
 }

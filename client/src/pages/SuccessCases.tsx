@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { LeadQualificationForm } from "@/components/LeadQualificationForm";
+import { BackToTop } from "@/components/BackToTop";
 
 const cases = [
   {
@@ -112,6 +113,7 @@ export default function SuccessCases() {
         </section>
       </main>
       <SiteFooter contactMessage="Quero conhecer os casos da Cenvara." />
+      <BackToTop />
     </div>
   );
 }

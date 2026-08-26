@@ -186,3 +186,9 @@
 - [x] Completar tags SEO e Open Graph das rotas /casos-de-sucesso e /apresentacao.
 - [x] Adicionar formulário de contato rápido ao final de /casos-de-sucesso com validação e consentimento LGPD.
 - [x] Cobrir as melhorias com testes automatizados e validação visual desktop/mobile. (6 testes no clone GitHub; páginas verificadas em desktop.)
+
+- [ ] Corrigir a área preta superior da página /apresentacao e garantir que o primeiro conteúdo apareça no topo.
+- [ ] Auditar e traduzir textos visíveis em inglês para português brasileiro.
+- [ ] Adicionar botão flutuante Voltar ao Topo em /apresentacao e /casos-de-sucesso.
+- [ ] Criar e publicar imagem institucional otimizada para og:image nas novas páginas.
+- [ ] Validar visual, idioma, SEO/Open Graph, responsividade e deploy.

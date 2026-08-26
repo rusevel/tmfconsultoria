@@ -45,6 +45,12 @@ describe("metadados institucionais da Cenvara", () => {
     expect(successCasesComponent).toContain("Não exibimos métricas numéricas");
     expect(presentationComponent).toContain("deck_download");
     expect(presentationComponent).toContain("ArrowRight");
+    expect(presentationComponent).toContain("documento comercial");
+    expect(presentationComponent).toContain("Tela {current.number}");
+    expect(presentationComponent).toContain("BackToTop");
+    expect(successCasesComponent).toContain("BackToTop");
+    expect(successCasesPage).toContain('property="og:image"');
+    expect(presentationPage).toContain('property="og:image"');
     expect(presentationComponent).toContain('role="progressbar"');
     expect(presentationComponent).toContain("/deck-comercial-cenvara.pdf");
     expect(successCasesComponent).toContain("LeadQualificationForm");
