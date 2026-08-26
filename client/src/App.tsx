@@ -1,5 +1,6 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch, useLocation } from "wouter";
@@ -60,6 +61,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <AnimatedRouter />
+          <FloatingWhatsApp />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
