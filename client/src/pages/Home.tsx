@@ -12,11 +12,11 @@ import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/whatsapp";
 
 const WHATSAPP_MESSAGE = DEFAULT_WHATSAPP_MESSAGE;
 const authorizedTestimonials = [
-  { quote: "Tivemos uma visão muito mais clara do nosso negócio. A TMF Consultoria nos ajudou a enxergar pontos que antes passavam despercebidos. A análise foi objetiva, profissional e trouxe informações importantes para tomarmos decisões com mais segurança.", name: "Carlos Mendes", role: "Empresário" },
+  { quote: "Tivemos uma visão muito mais clara do nosso negócio. A Cenvara nos ajudou a enxergar pontos que antes passavam despercebidos. A análise foi objetiva, profissional e trouxe informações importantes para tomarmos decisões com mais segurança.", name: "Carlos Mendes", role: "Empresário" },
   { quote: "Atendimento próximo e soluções práticas. O que mais gostei foi a forma como a consultoria entendeu nossa realidade antes de apresentar qualquer solução. O atendimento foi muito transparente e as orientações foram realmente aplicáveis ao nosso negócio.", name: "Mariana Oliveira", role: "Gestora Administrativa" },
-  { quote: "Mais organização e segurança para decidir. Precisávamos entender melhor nossa situação e identificar onde poderíamos melhorar. A TMF fez uma análise completa e apresentou as informações de maneira simples e objetiva.", name: "Rafael Almeida", role: "Diretor Comercial" },
+  { quote: "Mais organização e segurança para decidir. Precisávamos entender melhor nossa situação e identificar onde poderíamos melhorar. A Cenvara fez uma análise completa e apresentou as informações de maneira simples e objetiva.", name: "Rafael Almeida", role: "Diretor Comercial" },
   { quote: "Profissionalismo do início ao fim. Desde o primeiro contato, fomos muito bem atendidos. A equipe demonstrou conhecimento, organização e preocupação em entender nossas necessidades.", name: "Fernanda Costa", role: "Empresária" },
-  { quote: "Uma consultoria que realmente entende a empresa. A TMF não ficou apenas na teoria. Entenderam nossos desafios e apresentaram caminhos possíveis para melhorar nossa operação.", name: "Lucas Ferreira", role: "Sócio-Administrador" },
+  { quote: "Uma consultoria que realmente entende a empresa. A Cenvara não ficou apenas na teoria. Entenderam nossos desafios e apresentaram caminhos possíveis para melhorar nossa operação.", name: "Lucas Ferreira", role: "Sócio-Administrador" },
   { quote: "Clareza para tomar decisões melhores. Antes da consultoria, tínhamos muitas informações, mas pouca clareza sobre o que realmente precisava ser priorizado. A análise da TMF ajudou a organizar as ideias e identificar oportunidades de melhoria.", name: "Patrícia Santos", role: "Empresária" },
 ];
 
