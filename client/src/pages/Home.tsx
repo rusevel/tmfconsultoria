@@ -5,6 +5,7 @@
 import { useEffect } from "react";
 import "../leadership.css";
 import { ArrowUpRight, Check, ChevronDown, MessageCircle, ShieldCheck, Sparkles, Zap } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 import { LeadQualificationForm } from "@/components/LeadQualificationForm";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -95,7 +96,23 @@ export default function Home() {
 
         <section id="essencia" className="section essence-section">
           <div className="wrap essence-layout">
-            <div className="essence-intro reveal"><span className="section-kicker">essência Cenvara</span><h2>Uma marca criada para <span>organizar direção.</span></h2><p>Cenvara representa o centro da decisão, a leitura das variações de cada empresa e a direção que transforma informação em próximo passo.</p><div className="essence-mark" aria-hidden="true"><span>C</span><i /> <span>V</span><i /> <span>A</span></div></div>
+            <div className="essence-intro reveal">
+              <span className="section-kicker">essência Cenvara</span>
+              <h2>O centro que interpreta <span>as variações.</span></h2>
+              <p>Toda empresa opera entre variações: regras fiscais, processos e mercado. A Cenvara ocupa o centro dessa realidade para transformar complexidade em direção estratégica.</p>
+              <div className="essence-mark" aria-hidden="true"><span>C</span><i /> <span>V</span><i /> <span>A</span></div>
+              <div className="essence-deck-cta">
+                <a 
+                  className="button button-quiet" 
+                  href="/manus-storage/Cenvara_Fiscal___Estrat_gia___Deck_Comercial_60358948.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => trackEvent("deck_download", { placement: "essence" })}
+                >
+                  Baixar deck comercial (PDF) <ArrowUpRight size={16} />
+                </a>
+              </div>
+            </div>
             <div className="essence-content">
               <article className="essence-opportunity reveal"><span className="card-number">base de atendimento</span><h3>Estratégia para empresas em São Paulo, com atuação responsável em todo o Brasil.</h3><p>A Cenvara parte do contexto real de cada empresa para mapear riscos, avaliar oportunidades legais e transformar informação em direção clara para a gestão.</p></article>
               <div className="essence-cards">
@@ -110,6 +127,30 @@ export default function Home() {
         </section>
 
         <section id="conexoes" className="section connections-section"><div className="wrap"><div className="section-heading reveal"><span className="section-kicker">rede de confiança</span><h2>Conexões que fazem parte<br /><span>da nossa trajetória.</span></h2><p>Conheça empresas e profissionais que fazem parte do nosso entorno profissional. Cada conexão mantém sua própria história, atuação e identidade.</p></div><div className="connections-grid"><article className="connection-card reveal"><span className="connection-index">01</span><div><h3>P2 Solutions</h3><p>Soluções e tecnologia para negócios.</p><a href="https://p2solutions.com.br/" target="_blank" rel="noopener noreferrer">Visitar site <ArrowUpRight size={15} /></a></div></article><article className="connection-card reveal"><span className="connection-index">02</span><div><h3>Acerta Assessoria Contábil</h3><p>Contabilidade e assessoria para empresas.</p><a href="https://acertaassessoria.com.br/" target="_blank" rel="noopener noreferrer">Visitar site <ArrowUpRight size={15} /></a></div></article><article className="connection-card reveal"><span className="connection-index">03</span><div><h3>Gomes Contabilidade</h3><p>Soluções contábeis personalizadas.</p><a href="https://www.gomescont.com.br/" target="_blank" rel="noopener noreferrer">Visitar site <ArrowUpRight size={15} /></a></div></article><article className="connection-card reveal"><span className="connection-index">04</span><div><h3>Paulibras</h3><p>Distribuição e reposição de autopeças.</p><a href="https://www.paulibras.com/" target="_blank" rel="noopener noreferrer">Visitar site <ArrowUpRight size={15} /></a></div></article></div><small className="connections-note">As conexões são apresentadas de forma institucional, sem declaração de parceria comercial ou relação de cliente nesta página.</small></div></section>
+
+        <section className="pitch-banner-section reveal">
+          <div className="wrap">
+            <div className="pitch-banner">
+              <div className="pitch-banner-content">
+                <span className="section-kicker">pitch de 60 segundos</span>
+                <h3>A Cenvara ajuda empresas a tomar <strong>decisões melhores</strong> em meio às mudanças fiscais, contábeis e tecnológicas.</h3>
+                <p>Analisamos o contexto real, organizamos riscos e conectamos processos quando isso faz sentido. Não oferecemos respostas genéricas: primeiro entendemos a empresa, depois mostramos quais próximos passos são mais claros e responsáveis.</p>
+                <div className="pitch-banner-actions">
+                  <WhatsAppButton message="Assisti ao pitch da Cenvara e quero agendar um diagnóstico.">Agendar diagnóstico agora</WhatsAppButton>
+                  <a 
+                    className="text-link" 
+                    href="/manus-storage/Cenvara_Fiscal___Estrat_gia___Deck_Comercial_60358948.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={() => trackEvent("deck_download", { placement: "pitch_banner" })}
+                  >
+                    Ver apresentação completa <ArrowUpRight size={15} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <TestimonialCarousel testimonials={authorizedTestimonials} />
 

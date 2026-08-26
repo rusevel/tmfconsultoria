@@ -123,3 +123,58 @@
 
 - [x] Adicionar o Instagram oficial da Cenvara ao rodapé com abertura segura.
 - [x] Registrar e testar o evento de clique do Instagram no Analytics consentido.
+
+- [x] Adicionar hover animado e tooltip acessível ao ícone do Instagram no rodapé.
+- [x] Consolidar ícones e links de Instagram, LinkedIn e Facebook no rodapé com rastreamento consentido.
+- [x] Adiar a seção inicial de postagens recentes do Instagram até a configuração da API da Meta; nenhum conteúdo fictício foi publicado.
+- [x] Adiar a fonte segura de postagens do Instagram até que o usuário forneça a configuração necessária da Meta; nenhuma credencial foi exposta.
+- [x] Cobrir as melhorias sociais do rodapé com testes automatizados e validação visual.
+
+- [x] Adiar a seção dinâmica de postagens do Instagram até que exista token e configuração da Meta; manter o link oficial do perfil.
+
+- [x] Adicionar o TikTok oficial da Cenvara ao rodapé com hover e tooltip acessível.
+- [x] Registrar e testar o evento de clique do TikTok no Analytics consentido.
+
+- [x] Diagnosticar por que o Google Search Console não consegue ler o sitemap.xml da Cenvara. (O arquivo público responde HTTP 200; o erro exibido é compatível com falha temporária de leitura do Search Console.)
+- [x] Corrigir e validar sitemap, headers, regras Firebase e URLs canônicas se necessário. (XML válido, Content-Type application/xml, robots.txt e checksum local/público conferidos.)
+- [x] Revalidar a URL pública do sitemap e orientar o reenvio no Search Console. (Passos de reenvio comunicados após confirmar HTTP 200 e XML válido.)
+
+- [x] Adicionar o canal oficial da Cenvara no YouTube ao rodapé com hover e tooltip acessível.
+- [x] Registrar e testar o evento de clique do YouTube no Analytics consentido.
+- [x] Validar testes, build e checkpoint publicado após a integração do YouTube.
+
+- [x] Comparar a versão do YouTube no código local, GitHub Actions e Firebase público. (O repositório estava um commit atrás; o bundle público antigo não continha o canal.)
+- [x] Corrigir o fluxo de deploy Firebase se a versão pública estiver desatualizada. (Workflow ajustado para `pnpm build:firebase` e sincronizado ao GitHub.)
+- [x] Validar o canal YouTube na versão pública e registrar orientação de cache quando necessário. (Workflow 32987953332 concluído com sucesso; bundle público contém o canal e `youtube_click`.)
+
+- [x] Preparar backup do projeto Cenvara sem segredos, dependências ou artefatos temporários desnecessários.
+- [x] Enviar o backup compactado ao Google Drive em uma pasta identificável. (Arquivo movido para `Backups - Cenvara Fiscal e Estratégia`, pasta ID `19AApn9EEGztNbM_diYYDoEX7z43m93rF`.)
+- [x] Verificar o arquivo no Drive e documentar o conteúdo e a restauração. (Arquivo ID 1AWFg1gKqgewgKjRvqWupkeB36b7RFDYs, 583.240 bytes, manifesto incluído.)
+
+- [x] Confirmar a conta Manus usada com cenvaraconsult@gmail.com e o escopo de compartilhamento desejado. (A seção Account confirmou visualmente `cenvaraconsult@gmail.com`, perfil “Cenvara consult”.)
+- [x] Preparar o acesso aos checkpoints, código e backup sem incluir segredos em links públicos. (Checkpoint `manus-webdev://c648b114`, backup no Drive e pacote sem .env, tokens, credenciais, dependências ou logs.)
+- [x] Orientar a conexão da conta Google no Manus e confirmar o acesso ao projeto compartilhado. (E-mail Manus confirmado; o compartilhamento da pasta do Drive deve ser concluído pelo proprietário em Compartilhar, usando `cenvaraconsult@gmail.com`.)
+
+- [x] Usar o Drive da conta barrosrusevel@gmail.com como destino inicial do backup. (Proprietário confirmado no Drive: barrosrusevel@gmail.com.)
+- [x] Orientar o compartilhamento posterior do backup com cenvaraconsult@gmail.com. (Compartilhar a pasta pelo menu Compartilhar, usando o papel Editor ou Leitor conforme necessário.)
+
+- [x] Refinar os botões sociais de YouTube e TikTok com ícones, hover animado e foco acessível.
+- [x] Validar testes, build e responsividade após a melhoria dos botões sociais.
+
+- [x] Criar script completo para acompanhar os cinco slides comerciais da Cenvara.
+- [x] Revisar o roteiro com transições, tempo sugerido, objeções e chamada para diagnóstico.
+
+- [x] Executar e registrar `pnpm test` após a melhoria visual dos botões sociais de YouTube e TikTok. (3 arquivos e 7 testes aprovados.)
+- [x] Executar e registrar `pnpm build:firebase` e revalidar o item de build antes do próximo checkpoint. (Vite e validação de rotas, SEO e arquivos públicos aprovados.)
+
+- [x] Preparar conteúdo visual do deck comercial da Cenvara a partir do roteiro existente.
+- [x] Gerar e revisar o deck comercial visual em formato editável. (ID: kHA981KbAJ0TdrZjgoXNIe)
+- [x] Adicionar botão de download do deck no site com rastreamento consentido. (PDF: `/manus-storage/Cenvara_Fiscal___Estrat_gia___Deck_Comercial_60358948.pdf`; evento `deck_download` coberto por teste.)
+- [x] Integrar a narrativa de centro e variação na página Sobre Nós/Essência.
+- [x] Adicionar banner de destaque com o pitch de 60 segundos na home.
+- [x] Validar deck, download, conteúdo institucional, banner e responsividade. (7 testes, build Firebase e verificação visual desktop/mobile aprovados.)
+
+- [ ] Sincronizar as alterações recentes com o GitHub e publicar no Firebase Hosting.
+- [ ] Criar a página /casos-de-sucesso com depoimentos reais e dados de impacto verificáveis.
+- [ ] Criar a rota interativa /apresentacao para navegar pelo deck comercial.
+- [ ] Adicionar SEO, navegação, rastreamento consentido e testes para as novas rotas.

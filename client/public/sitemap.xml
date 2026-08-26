@@ -25,6 +25,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://cenvara-consultoria.web.app/casos-de-sucesso</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cenvara-consultoria.web.app/apresentacao</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://cenvara-consultoria.web.app/politica-de-privacidade</loc>
     <lastmod>2026-08-26</lastmod>
     <changefreq>yearly</changefreq>

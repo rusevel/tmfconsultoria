@@ -8,6 +8,10 @@ const homePage = readFileSync(resolve(projectRoot, "client/src/pages/Home.tsx"),
 const tributaryPage = readFileSync(resolve(projectRoot, "client/consultoria-tributaria/index.html"), "utf8");
 const fiscalPage = readFileSync(resolve(projectRoot, "client/consultoria-fiscal/index.html"), "utf8");
 const blogPage = readFileSync(resolve(projectRoot, "client/blog/index.html"), "utf8");
+const successCasesPage = readFileSync(resolve(projectRoot, "client/casos-de-sucesso/index.html"), "utf8");
+const presentationPage = readFileSync(resolve(projectRoot, "client/apresentacao/index.html"), "utf8");
+const successCasesComponent = readFileSync(resolve(projectRoot, "client/src/pages/SuccessCases.tsx"), "utf8");
+const presentationComponent = readFileSync(resolve(projectRoot, "client/src/pages/Presentation.tsx"), "utf8");
 const blogComponent = readFileSync(resolve(projectRoot, "client/src/pages/Blog.tsx"), "utf8");
 const sitemap = readFileSync(resolve(projectRoot, "client/public/sitemap.xml"), "utf8");
 const form = readFileSync(resolve(projectRoot, "client/src/components/LeadQualificationForm.tsx"), "utf8");
@@ -33,6 +37,14 @@ describe("metadados institucionais da Cenvara", () => {
     expect(blogComponent).toContain("Caderno Cenvara");
     expect(blogComponent).toContain("Agosto de 2026");
     expect(sitemap).toContain("https://cenvara-consultoria.web.app/blog");
+    expect(sitemap).toContain("https://cenvara-consultoria.web.app/casos-de-sucesso");
+    expect(sitemap).toContain("https://cenvara-consultoria.web.app/apresentacao");
+    expect(successCasesPage).toContain("Casos de Sucesso");
+    expect(presentationPage).toContain("Apresentação Comercial");
+    expect(successCasesComponent).toContain("relatos autorizados");
+    expect(successCasesComponent).toContain("Não exibimos métricas numéricas");
+    expect(presentationComponent).toContain("deck_download");
+    expect(presentationComponent).toContain("ArrowRight");
   });
 
   it("mantém contato global e confirmação acessível do formulário", () => {
@@ -53,6 +65,7 @@ describe("metadados institucionais da Cenvara", () => {
     expect(footer).toContain('tiktok_click');
     expect(footer).toContain("youtube.com/channel/UCYKzfZw0S-WiJ1WdHTgo2ww");
     expect(footer).toContain('youtube_click');
+    expect(homePage).toContain('deck_download');
     expect(footer).toContain('social-link');
     expect(footer).toContain('data-tooltip');
     expect(footer).toContain('Canais sociais da Cenvara');
