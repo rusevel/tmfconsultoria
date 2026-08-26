@@ -104,7 +104,7 @@ export default function Home() {
               <div className="essence-deck-cta">
                 <a 
                   className="button button-quiet" 
-                  href="/manus-storage/Cenvara_Fiscal___Estrat_gia___Deck_Comercial_60358948.pdf" 
+                  href="/deck-comercial-cenvara.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   onClick={() => trackEvent("deck_download", { placement: "essence" })}
@@ -139,7 +139,7 @@ export default function Home() {
                   <WhatsAppButton message="Assisti ao pitch da Cenvara e quero agendar um diagnóstico.">Agendar diagnóstico agora</WhatsAppButton>
                   <a 
                     className="text-link" 
-                    href="/manus-storage/Cenvara_Fiscal___Estrat_gia___Deck_Comercial_60358948.pdf" 
+                    href="/deck-comercial-cenvara.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     onClick={() => trackEvent("deck_download", { placement: "pitch_banner" })}

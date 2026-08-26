@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { trackEvent } from "@/lib/analytics";
 
-const deckUrl = "/manus-storage/Cenvara_Fiscal___Estrat_gia___Deck_Comercial_60358948.pdf";
+const deckUrl = "/deck-comercial-cenvara.pdf";
 const slides = [
   { number: "01", eyebrow: "Cenvara Fiscal & Estratégia", title: <>O centro da <em>decisão.</em></>, body: "Clareza para decidir. Estrutura para avançar.", accent: "CVA" },
   { number: "02", eyebrow: "Contexto", title: <>Empresas decidem em meio a <em>variações constantes.</em></>, body: "Regras fiscais, custos, processos, tecnologia e mercado mudam ao mesmo tempo.", accent: "Variações" },
