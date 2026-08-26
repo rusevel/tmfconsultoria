@@ -3,6 +3,13 @@
 - [ ] Trocar a marca ALTA por TMF — Tecnologia, Marketing e Fiscal Consultoria.
 - [ ] Criar a rota /consultoria-tributaria com conteúdo, metadados e schema próprios.
 - [ ] Criar a rota /consultoria-fiscal com conteúdo, metadados e schema próprios.
+- [ ] Auditar componentes, estados e repetições atuais.
+- [ ] Criar componentes reutilizáveis para cabeçalho, CTAs, cards e rodapé.
+- [ ] Implementar navegação suave, FAQ acessível e estados de foco/hover.
+- [ ] Adicionar transições de entrada e saída entre as páginas de serviço.
+- [ ] Validar animações com preferência de movimento reduzido.
+- [ ] Validar e-mail com feedback visual antes de abrir o WhatsApp.
+- [ ] Testar desktop, mobile, teclado e build de produção.
 - [ ] Adicionar links internos, sitemap e validação das duas rotas.
 - [ ] Atualizar wordmark, título, SEO, descrições e endereço do site.
 - [ ] Redefinir a proposta de valor para consultoria tributária, contábil, fiscal, marketing e TI.
@@ -16,3 +23,18 @@
 - [ ] Escolher e configurar um subdomínio gratuito ou domínio próprio.
 - [ ] Configurar inicialização automática e impedir suspensão do Termux.
 - [ ] Testar WhatsApp, formulário de e-mail e acesso externo.
+- [ ] Sincronizar a versão atualizada com a cópia usada para Firebase.
+- [ ] Gerar o build e publicar a atualização no Firebase Hosting.
+- [ ] Restaurar o conteúdo de produção no Firebase após conferir os arquivos extraídos.
+- [ ] Criar um comando automatizado de build e deploy com validação de arquivos.
+- [ ] Configurar GitHub Actions para publicar o Firebase após alterações na branch main.
+- [ ] Criar carrossel institucional pronto para depoimentos reais autorizados.
+- [ ] Adicionar hover, brilho e sombras dinâmicas aos cards de serviço.
+- [ ] Exibir botão flutuante de WhatsApp em todas as rotas.
+- [ ] Configurar eventos GA4 para WhatsApp e qualificação de lead.
+- [ ] Criar formulário de qualificação com consentimento obrigatório da LGPD.
+- [ ] Inserir depoimentos reais autorizados quando forem fornecidos.
+- [x] Corrigir a tela em branco e validar os arquivos servidos pelo Firebase.
+- [x] Adicionar autoplay e indicadores ao carrossel de depoimentos autorizados.
+- [x] Exibir confirmação animada e limpar o formulário após envio.
+- [x] Criar e vincular a página de Política de Privacidade.

@@ -1,3 +1,4 @@
+/* TMF app shell: global layers stay dark, quiet and consistent while routes remain direct and accessible. */
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AnalyticsConsent } from "@/components/AnalyticsConsent";
@@ -8,6 +9,7 @@ import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ServicePage from "./pages/ServicePage";
 
 function Router() {
@@ -16,6 +18,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/consultoria-tributaria"><ServicePage kind="tributaria" /></Route>
       <Route path="/consultoria-fiscal"><ServicePage kind="fiscal" /></Route>
+      <Route path="/politica-de-privacidade" component={PrivacyPolicy} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

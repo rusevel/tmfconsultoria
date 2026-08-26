@@ -88,7 +88,7 @@ export default function Home() {
         <section className="section contact-section"><div className="wrap"><div className="contact-box reveal"><div className="contact-copy"><span className="section-kicker">diagnóstico inicial</span><h2>Quero entender<br /><em>onde melhorar.</em></h2><p>Conte o essencial da empresa. A TMF usa os dados somente para responder ao pedido e abrir a conversa de atendimento.</p></div><div className="contact-actions"><LeadQualificationForm /></div></div></div></section>
       </main>
 
-      <footer className="site-footer"><div className="wrap footer-inner"><a className="brand" href="#top"><span className="brand-mark" aria-hidden="true"><span /></span><span>TMF<span className="brand-dot">.</span></span></a><span>Clareza para decidir melhor.</span><a href={whatsappUrl()} target="_blank" rel="noreferrer">+55 11 96929-3429 <ArrowUpRight size={14} /></a></div></footer>
+      <footer className="site-footer"><div className="wrap footer-inner"><a className="brand" href="#top"><span className="brand-mark" aria-hidden="true"><span /></span><span>TMF<span className="brand-dot">.</span></span></a><span>Clareza para decidir melhor.</span><a href="/politica-de-privacidade">Política de Privacidade</a><a href={whatsappUrl()} target="_blank" rel="noreferrer">+55 11 96929-3429 <ArrowUpRight size={14} /></a></div></footer>
     </div>
   );
 }
