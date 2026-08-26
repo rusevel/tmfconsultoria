@@ -200,3 +200,8 @@
 - [x] Reposicionar o botão “Voltar ao Topo” para ficar ao lado do WhatsApp, sem sobreposição em desktop e mobile.
 - [x] Esclarecer e aprimorar o fluxo do formulário de Casos de Sucesso: manter a captação, incluir assunto principal e informar que a continuidade ocorre no WhatsApp, sem página separada obrigatória.
 - [x] Refinar a primeira página: remover a linha horizontal intrusiva e a divisão vertical que atravessa a seção Essência Cenvara, preservando apenas separadores editoriais necessários.
+
+A seção Essência foi validada após o deploy do commit eba100e: a divisão vertical central e a borda horizontal intrusiva foram removidas, mantendo a leitura em duas colunas e os separadores internos dos cards. A Home foi conferida em desktop e mobile no preview; o workflow Firebase 33007220668 terminou com sucesso.
+- [x] Remover divisores das métricas em telas pequenas, mantendo apenas separação por espaço e tipografia.
+- [x] Criar a página `/sobre-a-cenvara` com a história institucional de Rusevel Barros e Jessica Carvalho.
+- [x] Estruturar o blog mensal com artigos fiscais, links internos e dados estruturados por artigo.

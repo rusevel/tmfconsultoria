@@ -15,6 +15,7 @@ import ServicePage from "@/pages/ServicePage";
 import Blog from "@/pages/Blog";
 import SuccessCases from "@/pages/SuccessCases";
 import Presentation from "@/pages/Presentation";
+import About from "@/pages/About";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/blog" component={Blog} />
       <Route path="/casos-de-sucesso" component={SuccessCases} />
       <Route path="/apresentacao" component={Presentation} />
+      <Route path="/sobre-a-cenvara" component={About} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

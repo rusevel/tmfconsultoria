@@ -10,6 +10,8 @@ const fiscalPage = readFileSync(resolve(projectRoot, "client/consultoria-fiscal/
 const blogPage = readFileSync(resolve(projectRoot, "client/blog/index.html"), "utf8");
 const successCasesPage = readFileSync(resolve(projectRoot, "client/casos-de-sucesso/index.html"), "utf8");
 const presentationPage = readFileSync(resolve(projectRoot, "client/apresentacao/index.html"), "utf8");
+const aboutPage = readFileSync(resolve(projectRoot, "client/sobre-a-cenvara/index.html"), "utf8");
+const aboutComponent = readFileSync(resolve(projectRoot, "client/src/pages/About.tsx"), "utf8");
 const successCasesComponent = readFileSync(resolve(projectRoot, "client/src/pages/SuccessCases.tsx"), "utf8");
 const presentationComponent = readFileSync(resolve(projectRoot, "client/src/pages/Presentation.tsx"), "utf8");
 const blogComponent = readFileSync(resolve(projectRoot, "client/src/pages/Blog.tsx"), "utf8");
@@ -36,9 +38,18 @@ describe("metadados institucionais da Cenvara", () => {
     expect(blogPage).toContain('rel="canonical"');
     expect(blogComponent).toContain("Caderno Cenvara");
     expect(blogComponent).toContain("Agosto de 2026");
+    expect(blogComponent).toContain('"@type": "BlogPosting"');
+    expect(blogComponent).toContain("relatedHref");
+    expect(blogPage).toContain('"@type":"CollectionPage"');
     expect(sitemap).toContain("https://cenvara-consultoria.web.app/blog");
     expect(sitemap).toContain("https://cenvara-consultoria.web.app/casos-de-sucesso");
     expect(sitemap).toContain("https://cenvara-consultoria.web.app/apresentacao");
+    expect(sitemap).toContain("https://cenvara-consultoria.web.app/sobre-a-cenvara");
+    expect(aboutPage).toContain("Sobre a Cenvara");
+    expect(aboutPage).toContain('property="og:image"');
+    expect(aboutPage).toContain('"@type":"AboutPage"');
+    expect(aboutComponent).toContain("Rusevel Barros");
+    expect(aboutComponent).toContain("Jessica Carvalho");
     expect(successCasesPage).toContain("Casos de Sucesso");
     expect(presentationPage).toContain("Apresentação Comercial");
     expect(successCasesComponent).toContain("relatos autorizados");

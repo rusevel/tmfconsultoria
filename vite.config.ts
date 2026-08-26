@@ -177,6 +177,7 @@ export default defineConfig({
         blog: path.resolve(import.meta.dirname, "client", "blog", "index.html"),
         casosDeSucesso: path.resolve(import.meta.dirname, "client", "casos-de-sucesso", "index.html"),
         apresentacao: path.resolve(import.meta.dirname, "client", "apresentacao", "index.html"),
+        sobreACenvara: path.resolve(import.meta.dirname, "client", "sobre-a-cenvara", "index.html"),
       },
     },
   },
