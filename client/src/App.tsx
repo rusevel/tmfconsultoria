@@ -13,9 +13,11 @@ import Home from "./pages/Home";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ServicePage from "@/pages/ServicePage";
 import Blog from "@/pages/Blog";
+import BlogArticle from "@/pages/BlogArticle";
 import SuccessCases from "@/pages/SuccessCases";
 import Presentation from "@/pages/Presentation";
 import About from "@/pages/About";
+import AdminNewsletter from "@/pages/AdminNewsletter";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -24,10 +26,12 @@ function Router() {
       <Route path="/consultoria-tributaria"><ServicePage kind="tributaria" /></Route>
       <Route path="/consultoria-fiscal"><ServicePage kind="fiscal" /></Route>
       <Route path="/politica-de-privacidade" component={PrivacyPolicy} />
+      <Route path="/blog/:slug" component={BlogArticle} />
       <Route path="/blog" component={Blog} />
       <Route path="/casos-de-sucesso" component={SuccessCases} />
       <Route path="/apresentacao" component={Presentation} />
       <Route path="/sobre-a-cenvara" component={About} />
+      <Route path="/gestor/newsletter" component={AdminNewsletter} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

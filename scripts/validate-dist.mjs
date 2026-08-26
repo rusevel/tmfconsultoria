@@ -6,6 +6,11 @@ const requiredPages = [
   ["index.html", "Cenvara Fiscal & Estratégia"],
   ["consultoria-tributaria/index.html", "Consultoria Tributária em São Paulo, SP"],
   ["consultoria-fiscal/index.html", "Consultoria Fiscal em São Paulo, SP"],
+  ["blog/index.html", "Caderno Cenvara"],
+  ["blog/mudancas-fiscais-decisoes-seguras/index.html", "Como transformar mudanças fiscais em decisões mais seguras"],
+  ["blog/ferramentas-digitais-operacao/index.html", "Ferramentas digitais que reduzem atrito na operação"],
+  ["blog/crescimento-com-estrutura/index.html", "Crescer com estrutura: fiscal, processos e tecnologia"],
+  ["sobre-a-cenvara/index.html", "Sobre a Cenvara"],
 ];
 
 for (const [relativePath, expectedText] of requiredPages) {

@@ -1,8 +1,10 @@
 import { ArrowUpRight, CalendarDays, Clock3, Link2 } from "lucide-react";
+import { trpc } from "@/lib/trpc";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
+import { NewsletterSignup } from "@/components/NewsletterSignup";
 
 const articles = [
   {
@@ -74,6 +76,19 @@ const structuredData = {
 };
 
 export default function Blog() {
+  const { data: dbPosts, isLoading } = trpc.newsletter.listPublished.useQuery();
+  const displayPosts = dbPosts?.length ? dbPosts.map(p => ({
+    slug: p.slug,
+    category: p.category,
+    date: p.publishedAt ? new Date(p.publishedAt).toLocaleDateString("pt-BR", { month: "long", year: "numeric" }) : "Caderno Cenvara",
+    readTime: "Leitura aplicada",
+    title: p.title,
+    excerpt: p.excerpt,
+    body: p.excerpt,
+    relatedHref: `/blog/${p.slug}`,
+    relatedLabel: "Ler artigo completo"
+  })) : articles;
+
   return (
     <div className="site-shell">
       <SiteHeader home contactMessage="Quero conversar sobre os conteúdos da Cenvara." />
@@ -93,19 +108,21 @@ export default function Blog() {
           <div className="wrap">
             <div className="section-heading blog-section-heading"><span className="section-kicker">artigos recentes</span><h2 id="blog-title">Conhecimento que<br /><span>vira próximo passo.</span></h2><p>Uma curadoria editorial para acompanhar mudanças, reconhecer oportunidades e estruturar decisões melhores.</p></div>
             <div className="blog-grid">
-              {articles.map((article, index) => (
+              {isLoading ? <p className="article-loading">Carregando artigos…</p> : displayPosts.map((article, index) => (
                 <article className="blog-card" id={article.slug} key={article.slug}>
                   <div className="blog-card-top"><span className="card-number">0{index + 1}</span><span className="blog-category">{article.category}</span></div>
                   <h3>{article.title}</h3>
                   <p>{article.excerpt}</p>
                   <p className="blog-article-summary">{article.body}</p>
                   <div className="blog-meta"><span><CalendarDays size={14} /> {article.date}</span><span><Clock3 size={14} /> {article.readTime}</span></div>
-                  <div className="blog-card-links"><a className="service-cta" href={article.relatedHref}><Link2 size={15} /> {article.relatedLabel}</a><a className="service-cta" href={`mailto:cenvaraconsult@gmail.com?subject=${encodeURIComponent(`Quero saber mais: ${article.title}`)}`}>Conversar sobre este tema <ArrowUpRight size={16} /></a></div>
+                                      <div className="blog-card-links"><a className="service-cta" href={`/blog/${article.slug}`}>Ler artigo completo <ArrowUpRight size={16} /></a><a className="service-cta" href={article.relatedHref}><Link2 size={15} /> {article.relatedLabel}</a></div>
+
                 </article>
               ))}
             </div>
           </div>
         </section>
+        <NewsletterSignup />
         <section className="section blog-cta-section"><div className="wrap"><div className="blog-cta"><div><span className="section-kicker">próximo conteúdo</span><h2>Quer receber uma leitura<br /><em>direto na conversa?</em></h2><p>Fale com a Cenvara e conte qual tema fiscal ou tecnológico merece uma análise mais próxima da realidade da sua empresa.</p></div><WhatsAppButton message="Quero receber conteúdos da Cenvara sobre temas fiscais e tecnológicos.">Falar com a Cenvara</WhatsAppButton></div></div></section>
       </main>
       <SiteFooter contactMessage="Quero conversar sobre os conteúdos da Cenvara." />

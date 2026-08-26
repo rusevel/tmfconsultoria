@@ -205,3 +205,12 @@ A seção Essência foi validada após o deploy do commit eba100e: a divisão ve
 - [x] Remover divisores das métricas em telas pequenas, mantendo apenas separação por espaço e tipografia.
 - [x] Criar a página `/sobre-a-cenvara` com a história institucional de Rusevel Barros e Jessica Carvalho.
 - [x] Estruturar o blog mensal com artigos fiscais, links internos e dados estruturados por artigo.
+- [x] Criar páginas individuais completas para os artigos do blog, com compartilhamento social acessível.
+- [x] Adicionar FAQ na página `/sobre-a-cenvara` com dúvidas e respostas institucionais.
+- [x] Adicionar inscrição de newsletter no blog com consentimento LGPD e confirmação visual.
+- [x] Criar painel restrito de gestor para criar, editar, publicar e arquivar artigos.
+- [x] Persistir artigos, inscrições e status de disparo no banco com proteção contra duplicidade.
+- [x] Integrar disparo de e-mail HTML leve aos inscritos quando um artigo for publicado.
+- [x] Testar permissões, validações, responsividade, envio e publicação automática.
+- [x] Usar Resend como provedor principal de entrega e manter Gmail SMTP como contingência configurável, sem armazenar senha normal.
+- [x] Criar painel editorial autenticado e restrito ao gestor para publicação de newsletters.

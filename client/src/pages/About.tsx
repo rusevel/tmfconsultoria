@@ -4,6 +4,13 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTop } from "@/components/BackToTop";
 
+const faqs = [
+  { question: "A Cenvara atende empresas de quais segmentos?", answer: "Atuamos com empresas de serviços e produtos, analisando o contexto, o regime, a operação e o momento de cada negócio antes de recomendar qualquer caminho." },
+  { question: "A consultoria garante redução de impostos?", answer: "Não fazemos promessa genérica. Avaliamos oportunidades previstas na legislação, riscos e dados da empresa para construir uma orientação responsável." },
+  { question: "A Cenvara também trabalha com tecnologia?", answer: "Sim. Conectamos processos, dados, automação e ferramentas digitais às necessidades fiscais, contábeis e comerciais da operação." },
+  { question: "Como começa o diagnóstico?", answer: "O primeiro contato acontece por uma conversa de contexto. A partir dela, entendemos prioridades e definimos quais informações são necessárias para a próxima etapa." },
+];
+
 const principles = [
   { icon: Compass, number: "01", title: "Contexto antes da recomendação", text: "Começamos pela realidade da empresa: operação, regime, dados, riscos e prioridades." },
   { icon: ShieldCheck, number: "02", title: "Responsabilidade técnica", text: "Traduzimos complexidade fiscal e tecnológica em decisões claras, sem promessas genéricas." },
@@ -44,6 +51,7 @@ export default function About() {
 
         <section className="section about-principles-section" aria-labelledby="principles-title"><div className="wrap"><div className="section-heading reveal"><span className="section-kicker">o que orienta nosso trabalho</span><h2 id="principles-title">Clareza para decidir.<br /><span>Estrutura para avançar.</span></h2></div><div className="principles-grid">{principles.map(({ icon: Icon, number, title, text }) => <article className="principle-item reveal" key={number}><Icon size={20} /><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
+        <section className="section about-faq-section" aria-labelledby="faq-title"><div className="wrap about-faq-grid"><div className="section-heading reveal"><span className="section-kicker">perguntas frequentes</span><h2 id="faq-title">Clareza antes<br /><span>da primeira conversa.</span></h2><p>Respostas diretas para começar uma avaliação com expectativas alinhadas.</p></div><div className="faq-list reveal">{faqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div></div></section>
         <section className="section about-cta-section"><div className="wrap"><div className="about-cta reveal"><div><span className="section-kicker">próximo capítulo</span><h2>Vamos entender o<br /><em>seu contexto?</em></h2><p>Conheça as áreas de atuação e veja como a Cenvara organiza decisões fiscais, contábeis, tecnológicas e comerciais.</p></div><a className="button button-primary" href="/#solucoes">Conhecer áreas de atuação <ArrowUpRight size={16} /></a></div></div></section>
       </main>
       <SiteFooter contactMessage="Quero conhecer a história da Cenvara." />
