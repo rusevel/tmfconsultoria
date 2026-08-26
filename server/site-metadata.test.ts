@@ -49,6 +49,13 @@ describe("metadados institucionais da Cenvara", () => {
     expect(footer).toContain('pinterest_click');
     expect(footer).toContain("instagram.com/cenvaraconsult");
     expect(footer).toContain('instagram_click');
+    expect(footer).toContain("tiktok.com/@cenvaraconsult");
+    expect(footer).toContain('tiktok_click');
+    expect(footer).toContain("youtube.com/channel/UCYKzfZw0S-WiJ1WdHTgo2ww");
+    expect(footer).toContain('youtube_click');
+    expect(footer).toContain('social-link');
+    expect(footer).toContain('data-tooltip');
+    expect(footer).toContain('Canais sociais da Cenvara');
     expect(analytics).toContain('cenvara-analytics-consent');
     expect(analytics).toContain('!== "granted"');
     expect(footer).toContain('rel="noopener noreferrer"');
