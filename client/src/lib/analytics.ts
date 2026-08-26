@@ -1,4 +1,4 @@
-/* TMF analytics: events carry conversion context only, never email, company name, or other personal data. */
+/* Cenvara analytics: events carry conversion context only, never email, company name, or other personal data. */
 export const GA_MEASUREMENT_ID = "G-Y6BYHGBBZ9";
 
 declare global {
@@ -9,7 +9,7 @@ declare global {
 }
 
 export function trackEvent(name: string, params: Record<string, string | number | boolean> = {}) {
-  if (typeof window === "undefined" || localStorage.getItem("tmf-analytics-consent") !== "granted") return;
+  if (typeof window === "undefined" || localStorage.getItem("cenvara-analytics-consent") !== "granted") return;
   window.gtag?.("event", name, params);
 }
 

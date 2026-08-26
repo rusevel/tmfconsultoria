@@ -1,4 +1,4 @@
-/* TMF visual system: reusable emerald CTA with clear focus states and contextual conversion copy. */
+/* Cenvara visual system: reusable emerald CTA with clear focus states and contextual conversion copy. */
 import { ArrowUpRight, MessageCircle } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 import { whatsappUrl } from "@/lib/whatsapp";

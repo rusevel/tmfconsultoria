@@ -1,4 +1,4 @@
-/* TMF conversion layer: persistent contact access across every public route. */
+/* Cenvara conversion layer: persistent contact access across every public route. */
 import { MessageCircle } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/whatsapp";

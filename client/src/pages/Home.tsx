@@ -1,5 +1,5 @@
 /*
- * TMF visual system: dark editorial minimalism, emerald action color, asymmetric layouts,
+ * Cenvara visual system: dark editorial minimalism, emerald action color, asymmetric layouts,
  * Space Grotesk display type + Manrope body type, restrained motion and direct CTAs.
  */
 import { useState } from "react";
@@ -7,6 +7,7 @@ import { ArrowUpRight, Check, ChevronDown, Menu, MessageCircle, ShieldCheck, Spa
 import { LeadQualificationForm } from "@/components/LeadQualificationForm";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { Brand } from "@/components/Brand";
 import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/whatsapp";
 
 const WHATSAPP_MESSAGE = DEFAULT_WHATSAPP_MESSAGE;
@@ -18,10 +19,7 @@ export default function Home() {
     <div className="site-shell">
       <header className="site-header">
         <div className="wrap nav">
-          <a className="brand" href="#top" aria-label="TMF início">
-            <span className="brand-mark" aria-hidden="true"><span /></span>
-            <span>TMF<span className="brand-dot">.</span></span>
-          </a>
+          <Brand href="#top" />
           <nav className="desktop-nav" aria-label="Navegação principal">
             <a href="#solucoes">Áreas de atuação</a>
             <a href="#processo">Método</a>
@@ -38,9 +36,9 @@ export default function Home() {
           <div className="hero-art" aria-hidden="true" />
           <div className="wrap hero-grid">
             <div className="hero-copy reveal">
-              <div className="eyebrow"><span className="pulse-dot" /> estratégia para empresas que querem crescer</div>
-              <h1>Reduza riscos, organize a operação e cresça com <em>mais clareza.</em></h1>
-              <p className="hero-lead">Consultoria fiscal, contábil, tributária, de marketing e TI para encontrar oportunidades legais, melhorar decisões e transformar complexidade em direção.</p>
+              <div className="eyebrow"><span className="pulse-dot" /> Cenvara Fiscal & Estratégia</div>
+              <h1>Clareza para decidir.<br />Estrutura para <em>avançar.</em></h1>
+              <p className="hero-lead">Consultoria fiscal, contábil, tributária, de marketing e tecnologia para organizar riscos, avaliar oportunidades legais e transformar complexidade em direção.</p>
               <div className="hero-actions">
                 <WhatsAppButton message="Quero agendar um diagnóstico fiscal para minha empresa.">Quero agendar um diagnóstico</WhatsAppButton>
                 <a className="button button-quiet" href="#solucoes">Conhecer as áreas de atuação <ChevronDown size={16} /></a>
@@ -51,7 +49,7 @@ export default function Home() {
             <div className="hero-visual reveal" aria-label="Prévia visual de um site premium">
               <div className="orb orb-one" /><div className="orb orb-two" />
               <div className="browser-frame">
-                <div className="browser-top"><span /><span /><span /><small>tmf.consultoria / preview</small></div>
+                <div className="browser-top"><span /><span /><span /><small>cenvara / diagnóstico</small></div>
                 <div className="browser-content">
                   <div className="preview-kicker">intelligence / 01</div>
                   <h2>Decisões que<br /><strong>protegem margem.</strong></h2>
@@ -85,10 +83,10 @@ export default function Home() {
 
         <section id="duvidas" className="section faq-section"><div className="wrap faq-layout"><div className="section-heading reveal"><span className="section-kicker">antes de conversar</span><h2>O essencial,<br /><span>sem rodeios.</span></h2><a className="text-link" href={whatsappUrl("Tenho uma dúvida sobre o diagnóstico tributário.")} target="_blank" rel="noreferrer">Tirar uma dúvida no WhatsApp <ArrowUpRight size={16} /></a></div><div className="faq-list reveal"><details><summary>Como começa o diagnóstico?<ChevronDown size={18} /></summary><p>Você envia uma mensagem com o segmento e o principal desafio da empresa. A partir daí, alinhamos o escopo das informações necessárias para uma análise responsável.</p></details><details><summary>A consultoria garante redução de impostos?<ChevronDown size={18} /></summary><p>Não existe promessa responsável sem análise. Avaliamos oportunidades legais conforme os dados e a legislação aplicável, sempre com transparência sobre premissas, riscos e limites.</p></details><details><summary>Vocês também atuam com marketing e TI?<ChevronDown size={18} /></summary><p>Sim. A proposta é integrar inteligência fiscal e contábil com posicionamento, aquisição e processos digitais, quando isso fizer sentido para o momento da empresa.</p></details></div></div></section>
 
-        <section className="section contact-section"><div className="wrap"><div className="contact-box reveal"><div className="contact-copy"><span className="section-kicker">diagnóstico inicial</span><h2>Quero entender<br /><em>onde melhorar.</em></h2><p>Conte o essencial da empresa. A TMF usa os dados somente para responder ao pedido e abrir a conversa de atendimento.</p></div><div className="contact-actions"><LeadQualificationForm /></div></div></div></section>
+        <section className="section contact-section"><div className="wrap"><div className="contact-box reveal"><div className="contact-copy"><span className="section-kicker">diagnóstico inicial</span><h2>Quero entender<br /><em>onde melhorar.</em></h2><p>Conte o essencial da empresa. A Cenvara usa os dados somente para responder ao pedido e abrir a conversa de atendimento.</p></div><div className="contact-actions"><LeadQualificationForm /></div></div></div></section>
       </main>
 
-      <footer className="site-footer"><div className="wrap footer-inner"><a className="brand" href="#top"><span className="brand-mark" aria-hidden="true"><span /></span><span>TMF<span className="brand-dot">.</span></span></a><span>Clareza para decidir melhor.</span><a href="/politica-de-privacidade">Política de Privacidade</a><a href={whatsappUrl()} target="_blank" rel="noreferrer">+55 11 96929-3429 <ArrowUpRight size={14} /></a></div></footer>
+      <footer className="site-footer"><div className="wrap footer-inner"><Brand href="#top" /><span>Clareza para decidir. Estrutura para avançar.</span><a href="/politica-de-privacidade">Política de Privacidade</a><a href={whatsappUrl()} target="_blank" rel="noreferrer">+55 11 96929-3429 <ArrowUpRight size={14} /></a></div></footer>
     </div>
   );
 }

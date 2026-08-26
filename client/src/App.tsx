@@ -1,4 +1,4 @@
-/* TMF app shell: global layers stay dark, quiet and consistent while routes remain direct and accessible. */
+/* Cenvara app shell: global layers stay dark, quiet and consistent while routes remain direct and accessible. */
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AnalyticsConsent } from "@/components/AnalyticsConsent";
@@ -25,7 +25,7 @@ function Router() {
   );
 }
 
-/** TMF interaction layer: routes transition quickly to acknowledge navigation without delaying intent. */
+/** Cenvara interaction layer: routes transition quickly to acknowledge navigation without delaying intent. */
 function AnimatedRouter() {
   const [location] = useLocation();
   const reduceMotion = useReducedMotion();

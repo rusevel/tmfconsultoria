@@ -1,4 +1,4 @@
-/* TMF privacy layer: GA4 loads only after an explicit analytics choice, with a direct route to data-use details. */
+/* Cenvara privacy layer: GA4 loads only after an explicit analytics choice, with a direct route to data-use details. */
 import { useEffect, useState } from "react";
 import { Check, ShieldCheck, X } from "lucide-react";
 import { enableAnalytics } from "@/lib/analytics";
@@ -7,13 +7,13 @@ export function AnalyticsConsent() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem("tmf-analytics-consent");
+    const consent = localStorage.getItem("cenvara-analytics-consent");
     if (consent === "granted") enableAnalytics();
     if (!consent) setVisible(true);
   }, []);
 
   const decide = (choice: "granted" | "denied") => {
-    localStorage.setItem("tmf-analytics-consent", choice);
+    localStorage.setItem("cenvara-analytics-consent", choice);
     if (choice === "granted") enableAnalytics();
     setVisible(false);
   };

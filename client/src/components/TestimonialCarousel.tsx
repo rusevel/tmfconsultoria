@@ -1,4 +1,4 @@
-/* TMF trust layer: carousel accepts only real, authorized testimonials supplied by the business, with restrained accessible motion. */
+/* Cenvara trust layer: carousel accepts only real, authorized testimonials supplied by the business, with restrained accessible motion. */
 import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -26,8 +26,8 @@ export function TestimonialCarousel({ testimonials = [] }: TestimonialCarouselPr
     return (
       <section className="section testimonials-section" aria-labelledby="testimonials-title">
         <div className="wrap testimonials-empty">
-          <div className="section-heading"><span className="section-kicker">confiança construída</span><h2 id="testimonials-title">Resultados pedem contexto,<br /><span>e autorização.</span></h2><p>A TMF publicará depoimentos somente quando houver autorização explícita do cliente e informações verificáveis sobre a experiência.</p></div>
-          <div className="testimonial-consent-card"><Quote size={25} aria-hidden="true" /><div><strong>Espaço reservado para vozes reais.</strong><p>O carrossel já está preparado para receber depoimentos autorizados, sem avaliações fictícias ou promessas genéricas.</p></div><WhatsAppButton className="testimonial-contact" message="Quero saber como funciona o diagnóstico da TMF.">Conversar com a TMF</WhatsAppButton></div>
+          <div className="section-heading"><span className="section-kicker">confiança construída</span><h2 id="testimonials-title">Resultados pedem contexto,<br /><span>e autorização.</span></h2><p>A Cenvara publicará depoimentos somente quando houver autorização explícita do cliente e informações verificáveis sobre a experiência.</p></div>
+          <div className="testimonial-consent-card"><Quote size={25} aria-hidden="true" /><div><strong>Espaço reservado para vozes reais.</strong><p>O carrossel já está preparado para receber depoimentos autorizados, sem avaliações fictícias ou promessas genéricas.</p></div><WhatsAppButton className="testimonial-contact" message="Quero saber como funciona o diagnóstico da Cenvara.">Conversar com a Cenvara</WhatsAppButton></div>
         </div>
       </section>
     );
