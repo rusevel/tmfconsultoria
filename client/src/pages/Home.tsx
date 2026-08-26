@@ -3,7 +3,8 @@
  * Space Grotesk display type + Manrope body type, restrained motion and direct CTAs.
  */
 import { useState } from "react";
-import { ArrowUpRight, Check, ChevronDown, Mail, Menu, MessageCircle, ShieldCheck, Sparkles, X, Zap } from "lucide-react";
+import { ArrowUpRight, Check, ChevronDown, Menu, MessageCircle, ShieldCheck, Sparkles, X, Zap } from "lucide-react";
+import { LeadQualificationForm } from "@/components/LeadQualificationForm";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/whatsapp";
@@ -11,17 +12,7 @@ import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/whatsapp";
 const WHATSAPP_MESSAGE = DEFAULT_WHATSAPP_MESSAGE;
 
 export default function Home() {
-  const [email, setEmail] = useState("");
-  const [emailSent, setEmailSent] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  function handleEmailSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    if (!email.trim()) return;
-    const message = `${WHATSAPP_MESSAGE}. Meu e-mail é ${email.trim()}.`;
-    setEmailSent(true);
-    window.open(whatsappUrl(message), "_blank", "noopener,noreferrer");
-  }
 
   return (
     <div className="site-shell">
@@ -94,7 +85,7 @@ export default function Home() {
 
         <section id="duvidas" className="section faq-section"><div className="wrap faq-layout"><div className="section-heading reveal"><span className="section-kicker">antes de conversar</span><h2>O essencial,<br /><span>sem rodeios.</span></h2><a className="text-link" href={whatsappUrl("Tenho uma dúvida sobre o diagnóstico tributário.")} target="_blank" rel="noreferrer">Tirar uma dúvida no WhatsApp <ArrowUpRight size={16} /></a></div><div className="faq-list reveal"><details><summary>Como começa o diagnóstico?<ChevronDown size={18} /></summary><p>Você envia uma mensagem com o segmento e o principal desafio da empresa. A partir daí, alinhamos o escopo das informações necessárias para uma análise responsável.</p></details><details><summary>A consultoria garante redução de impostos?<ChevronDown size={18} /></summary><p>Não existe promessa responsável sem análise. Avaliamos oportunidades legais conforme os dados e a legislação aplicável, sempre com transparência sobre premissas, riscos e limites.</p></details><details><summary>Vocês também atuam com marketing e TI?<ChevronDown size={18} /></summary><p>Sim. A proposta é integrar inteligência fiscal e contábil com posicionamento, aquisição e processos digitais, quando isso fizer sentido para o momento da empresa.</p></details></div></div></section>
 
-        <section className="section contact-section"><div className="wrap"><div className="contact-box reveal"><div className="contact-copy"><span className="section-kicker">diagnóstico inicial</span><h2>Quero entender<br /><em>onde melhorar.</em></h2><p>Deixe seu e-mail ou fale diretamente com a gente. Conte o principal desafio da sua empresa e receba o próximo passo.</p></div><div className="contact-actions"><form onSubmit={handleEmailSubmit} className="email-form"><label htmlFor="email">E-mail corporativo</label><div className="email-input-wrap"><Mail size={18} /><input id="email" type="email" placeholder="voce@empresa.com.br" value={email} onChange={(event) => { setEmail(event.target.value); setEmailSent(false); }} required /><button type="submit" aria-label="Enviar e-mail"><ArrowUpRight size={19} /></button></div>{emailSent && <small className="form-success">E-mail preparado. Finalize o contato no WhatsApp.</small>}</form><WhatsAppButton className="contact-button" message="Quero entender onde melhorar na minha empresa.">Falar com um consultor</WhatsAppButton></div></div></div></section>
+        <section className="section contact-section"><div className="wrap"><div className="contact-box reveal"><div className="contact-copy"><span className="section-kicker">diagnóstico inicial</span><h2>Quero entender<br /><em>onde melhorar.</em></h2><p>Conte o essencial da empresa. A TMF usa os dados somente para responder ao pedido e abrir a conversa de atendimento.</p></div><div className="contact-actions"><LeadQualificationForm /></div></div></div></section>
       </main>
 
       <footer className="site-footer"><div className="wrap footer-inner"><a className="brand" href="#top"><span className="brand-mark" aria-hidden="true"><span /></span><span>TMF<span className="brand-dot">.</span></span></a><span>Clareza para decidir melhor.</span><a href={whatsappUrl()} target="_blank" rel="noreferrer">+55 11 96929-3429 <ArrowUpRight size={14} /></a></div></footer>
