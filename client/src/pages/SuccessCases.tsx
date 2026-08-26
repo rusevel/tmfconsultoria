@@ -2,6 +2,7 @@ import { ArrowLeft, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { LeadQualificationForm } from "@/components/LeadQualificationForm";
 
 const cases = [
   {
@@ -93,6 +94,13 @@ export default function SuccessCases() {
                 </article>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="success-contact section">
+          <div className="wrap success-contact-grid">
+            <div className="section-heading reveal"><span className="section-kicker">próximo passo</span><h2>Vamos encontrar o centro da sua <span>próxima decisão.</span></h2><p>Conte-nos o principal desafio da sua empresa. O formulário é rápido, exige consentimento e abre o WhatsApp apenas depois da validação.</p></div>
+            <div className="success-contact-form reveal"><LeadQualificationForm /></div>
           </div>
         </section>
 

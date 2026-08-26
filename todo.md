@@ -174,7 +174,15 @@
 - [x] Adicionar banner de destaque com o pitch de 60 segundos na home.
 - [x] Validar deck, download, conteúdo institucional, banner e responsividade. (7 testes, build Firebase e verificação visual desktop/mobile aprovados.)
 
-- [ ] Sincronizar as alterações recentes com o GitHub e publicar no Firebase Hosting.
-- [ ] Criar a página /casos-de-sucesso com depoimentos reais e dados de impacto verificáveis.
-- [ ] Criar a rota interativa /apresentacao para navegar pelo deck comercial.
-- [ ] Adicionar SEO, navegação, rastreamento consentido e testes para as novas rotas.
+- [x] Sincronizar as alterações recentes com o GitHub e publicar no Firebase Hosting. (Commit `0e2b5a7`; workflow `33001885700` concluído com sucesso.)
+- [x] Criar a página /casos-de-sucesso com depoimentos reais e dados de impacto verificáveis. (Impactos qualitativos derivados dos relatos; sem métricas numéricas inventadas.)
+- [x] Criar a rota interativa /apresentacao para navegar pelo deck comercial.
+- [x] Adicionar SEO, navegação, rastreamento consentido e testes para as novas rotas. (Sitemap atualizado, CTA `deck_download`, 6 testes no clone GitHub.)
+
+- [x] Corrigir o asset público do PDF do deck no Firebase, pois a URL /manus-storage está sendo reescrita para index.html. (Asset migrado para `/deck-comercial-cenvara.pdf`.)
+- [x] Reexecutar o deploy e verificar que o PDF público retorna Content-Type e tamanho corretos. (HTTP 200, `application/pdf`, 353.462 bytes e assinatura `%PDF-`.)
+
+- [x] Tornar a barra de progresso da apresentação interativa mais evidente e adicionar download direto do PDF.
+- [x] Completar tags SEO e Open Graph das rotas /casos-de-sucesso e /apresentacao.
+- [x] Adicionar formulário de contato rápido ao final de /casos-de-sucesso com validação e consentimento LGPD.
+- [x] Cobrir as melhorias com testes automatizados e validação visual desktop/mobile. (6 testes no clone GitHub; páginas verificadas em desktop.)

@@ -46,7 +46,7 @@ export default function Presentation() {
         </section>
         <section className="interactive-deck-section section" aria-label="Deck comercial interativo">
           <div className="wrap">
-            <div className="deck-progress"><span>Slide {current.number} / 08</span><div><i style={{ width: progress }} /></div><span>Use ← →</span></div>
+            <div className="deck-progress" aria-label={`Progresso da apresentação: slide ${active + 1} de ${slides.length}`}><span>Slide {current.number} / 08</span><div role="progressbar" aria-valuemin={1} aria-valuemax={slides.length} aria-valuenow={active + 1} aria-valuetext={`Slide ${active + 1} de ${slides.length}`}><i style={{ width: progress }} /></div><span>Use ← →</span></div>
             <div className="interactive-slide" key={current.number}>
               <div className="interactive-slide-copy"><span className="section-kicker">{current.eyebrow}</span><h2>{current.title}</h2><p>{current.body}</p>{active === slides.length - 1 && <WhatsAppButton message="Quero agendar um diagnóstico com a Cenvara.">Agendar diagnóstico</WhatsAppButton>}</div>
               <div className="interactive-slide-mark" aria-hidden="true"><span>{current.accent}</span><b>{current.number}</b></div>

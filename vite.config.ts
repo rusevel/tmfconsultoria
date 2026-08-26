@@ -175,6 +175,8 @@ export default defineConfig({
         consultoriaTributaria: path.resolve(import.meta.dirname, "client", "consultoria-tributaria", "index.html"),
         consultoriaFiscal: path.resolve(import.meta.dirname, "client", "consultoria-fiscal", "index.html"),
         blog: path.resolve(import.meta.dirname, "client", "blog", "index.html"),
+        casosDeSucesso: path.resolve(import.meta.dirname, "client", "casos-de-sucesso", "index.html"),
+        apresentacao: path.resolve(import.meta.dirname, "client", "apresentacao", "index.html"),
       },
     },
   },

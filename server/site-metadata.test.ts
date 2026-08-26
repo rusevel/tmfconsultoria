@@ -45,6 +45,14 @@ describe("metadados institucionais da Cenvara", () => {
     expect(successCasesComponent).toContain("Não exibimos métricas numéricas");
     expect(presentationComponent).toContain("deck_download");
     expect(presentationComponent).toContain("ArrowRight");
+    expect(presentationComponent).toContain('role="progressbar"');
+    expect(presentationComponent).toContain("/deck-comercial-cenvara.pdf");
+    expect(successCasesComponent).toContain("LeadQualificationForm");
+    expect(successCasesComponent).toContain("próximo passo");
+    expect(successCasesPage).toContain('property="og:site_name"');
+    expect(successCasesPage).toContain('name="twitter:description"');
+    expect(presentationPage).toContain('property="og:site_name"');
+    expect(presentationPage).toContain('name="twitter:description"');
   });
 
   it("mantém contato global e confirmação acessível do formulário", () => {
