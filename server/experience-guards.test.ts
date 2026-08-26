@@ -28,6 +28,8 @@ describe("guardas de experiência Cenvara", () => {
     expect(app).toContain('classList.add("show")');
     expect(styles).toContain(".back-to-top{position:fixed;right:101px");
     expect(styles).toContain("@media (max-width:600px){.back-to-top{right:83px");
+    expect(styles).not.toContain(".essence-section:before");
+    expect(styles).not.toContain(".process-section{background:linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.035));border-block:1px solid var(--line)}");
   });
 
   it("explica o fluxo de captação e mantém a marca atual nos depoimentos", () => {

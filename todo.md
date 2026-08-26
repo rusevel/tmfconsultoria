@@ -199,3 +199,4 @@
 - [x] Corrigir a rota pública `/casos-de-sucesso/` que estava exibindo conteúdo invisível no Firebase; a página existe e agora revela o conteúdo também fora da Home.
 - [x] Reposicionar o botão “Voltar ao Topo” para ficar ao lado do WhatsApp, sem sobreposição em desktop e mobile.
 - [x] Esclarecer e aprimorar o fluxo do formulário de Casos de Sucesso: manter a captação, incluir assunto principal e informar que a continuidade ocorre no WhatsApp, sem página separada obrigatória.
+- [x] Refinar a primeira página: remover a linha horizontal intrusiva e a divisão vertical que atravessa a seção Essência Cenvara, preservando apenas separadores editoriais necessários.
