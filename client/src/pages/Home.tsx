@@ -3,18 +3,16 @@
  * Space Grotesk display type + Manrope body type, restrained motion and direct CTAs.
  */
 import { useState } from "react";
-import { ArrowUpRight, Check, ChevronDown, Mail, MessageCircle, ShieldCheck, Sparkles, Zap } from "lucide-react";
+import { ArrowUpRight, Check, ChevronDown, Mail, Menu, MessageCircle, ShieldCheck, Sparkles, X, Zap } from "lucide-react";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { DEFAULT_WHATSAPP_MESSAGE, whatsappUrl } from "@/lib/whatsapp";
 
-const WHATSAPP_NUMBER = "5511969293429";
-const WHATSAPP_MESSAGE = "Quero saber mais sobre o site";
-
-function whatsappUrl(message = WHATSAPP_MESSAGE) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-}
+const WHATSAPP_MESSAGE = DEFAULT_WHATSAPP_MESSAGE;
 
 export default function Home() {
   const [email, setEmail] = useState("");
   const [emailSent, setEmailSent] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   function handleEmailSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -38,6 +36,8 @@ export default function Home() {
             <a href="#duvidas">Dúvidas</a>
             <a className="nav-cta" href={whatsappUrl("Quero agendar um diagnóstico fiscal.")} target="_blank" rel="noreferrer">Agendar diagnóstico <ArrowUpRight size={15} /></a>
           </nav>
+          <button className="mobile-menu-toggle" type="button" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen} aria-controls="mobile-nav" onClick={() => setMenuOpen((open) => !open)}>{menuOpen ? <X size={21} /> : <Menu size={21} />}</button>
+          {menuOpen && <nav id="mobile-nav" className="mobile-nav" aria-label="Navegação mobile"><a href="#solucoes" onClick={() => setMenuOpen(false)}>Áreas de atuação</a><a href="#processo" onClick={() => setMenuOpen(false)}>Método</a><a href="#duvidas" onClick={() => setMenuOpen(false)}>Dúvidas</a><a className="nav-cta" href={whatsappUrl("Quero agendar um diagnóstico fiscal.")} target="_blank" rel="noreferrer">Agendar diagnóstico <ArrowUpRight size={15} /></a></nav>}
         </div>
       </header>
 
@@ -50,7 +50,7 @@ export default function Home() {
               <h1>Reduza riscos, organize a operação e cresça com <em>mais clareza.</em></h1>
               <p className="hero-lead">Consultoria fiscal, contábil, tributária, de marketing e TI para encontrar oportunidades legais, melhorar decisões e transformar complexidade em direção.</p>
               <div className="hero-actions">
-                <a className="button button-primary" href={whatsappUrl("Quero agendar um diagnóstico fiscal para minha empresa.")} target="_blank" rel="noreferrer"><MessageCircle size={18} /> Quero agendar um diagnóstico <ArrowUpRight size={16} /></a>
+                <WhatsAppButton message="Quero agendar um diagnóstico fiscal para minha empresa.">Quero agendar um diagnóstico</WhatsAppButton>
                 <a className="button button-quiet" href="#solucoes">Conhecer as áreas de atuação <ChevronDown size={16} /></a>
               </div>
               <div className="trust-line"><span><Check size={14} /> análise sob medida</span><span><Check size={14} /> atuação dentro da lei</span></div>
@@ -91,7 +91,7 @@ export default function Home() {
 
         <section id="duvidas" className="section faq-section"><div className="wrap faq-layout"><div className="section-heading reveal"><span className="section-kicker">antes de conversar</span><h2>O essencial,<br /><span>sem rodeios.</span></h2><a className="text-link" href={whatsappUrl("Tenho uma dúvida sobre o diagnóstico tributário.")} target="_blank" rel="noreferrer">Tirar uma dúvida no WhatsApp <ArrowUpRight size={16} /></a></div><div className="faq-list reveal"><details><summary>Como começa o diagnóstico?<ChevronDown size={18} /></summary><p>Você envia uma mensagem com o segmento e o principal desafio da empresa. A partir daí, alinhamos o escopo das informações necessárias para uma análise responsável.</p></details><details><summary>A consultoria garante redução de impostos?<ChevronDown size={18} /></summary><p>Não existe promessa responsável sem análise. Avaliamos oportunidades legais conforme os dados e a legislação aplicável, sempre com transparência sobre premissas, riscos e limites.</p></details><details><summary>Vocês também atuam com marketing e TI?<ChevronDown size={18} /></summary><p>Sim. A proposta é integrar inteligência fiscal e contábil com posicionamento, aquisição e processos digitais, quando isso fizer sentido para o momento da empresa.</p></details></div></div></section>
 
-        <section className="section contact-section"><div className="wrap"><div className="contact-box reveal"><div className="contact-copy"><span className="section-kicker">diagnóstico inicial</span><h2>Quero entender<br /><em>onde melhorar.</em></h2><p>Deixe seu e-mail ou fale diretamente com a gente. Conte o principal desafio da sua empresa e receba o próximo passo.</p></div><div className="contact-actions"><form onSubmit={handleEmailSubmit} className="email-form"><label htmlFor="email">E-mail corporativo</label><div className="email-input-wrap"><Mail size={18} /><input id="email" type="email" placeholder="voce@empresa.com.br" value={email} onChange={(event) => { setEmail(event.target.value); setEmailSent(false); }} required /><button type="submit" aria-label="Enviar e-mail"><ArrowUpRight size={19} /></button></div>{emailSent && <small className="form-success">E-mail preparado. Finalize o contato no WhatsApp.</small>}</form><a className="button button-primary contact-button" href={whatsappUrl("Quero entender onde melhorar na minha empresa.")} target="_blank" rel="noreferrer"><MessageCircle size={18} /> Falar com um consultor</a></div></div></div></section>
+        <section className="section contact-section"><div className="wrap"><div className="contact-box reveal"><div className="contact-copy"><span className="section-kicker">diagnóstico inicial</span><h2>Quero entender<br /><em>onde melhorar.</em></h2><p>Deixe seu e-mail ou fale diretamente com a gente. Conte o principal desafio da sua empresa e receba o próximo passo.</p></div><div className="contact-actions"><form onSubmit={handleEmailSubmit} className="email-form"><label htmlFor="email">E-mail corporativo</label><div className="email-input-wrap"><Mail size={18} /><input id="email" type="email" placeholder="voce@empresa.com.br" value={email} onChange={(event) => { setEmail(event.target.value); setEmailSent(false); }} required /><button type="submit" aria-label="Enviar e-mail"><ArrowUpRight size={19} /></button></div>{emailSent && <small className="form-success">E-mail preparado. Finalize o contato no WhatsApp.</small>}</form><WhatsAppButton className="contact-button" message="Quero entender onde melhorar na minha empresa.">Falar com um consultor</WhatsAppButton></div></div></div></section>
       </main>
 
       <footer className="site-footer"><div className="wrap footer-inner"><a className="brand" href="#top"><span className="brand-mark" aria-hidden="true"><span /></span><span>TMF<span className="brand-dot">.</span></span></a><span>Clareza para decidir melhor.</span><a href={whatsappUrl()} target="_blank" rel="noreferrer">+55 11 96929-3429 <ArrowUpRight size={14} /></a></div></footer>
