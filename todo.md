@@ -217,3 +217,7 @@ A seção Essência foi validada após o deploy do commit eba100e: a divisão ve
 - [x] Criar uma oferta de diagnóstico fiscal com gancho direto e palavra-chave de ação para captura de leads.
 - [x] Integrar a oferta à Home, ao formulário de qualificação e ao WhatsApp com mensagem contextual.
 - [x] Garantir consentimento LGPD, rastreamento condicionado e validação responsiva da nova jornada.
+- [x] Criar painel administrativo protegido para visualizar os leads captados.
+- [x] Adicionar filtros por período, porte, assunto e origem sem expor dados publicamente.
+- [x] Implementar exportação CSV segura dos leads filtrados.
+- [x] Testar permissão de gestor, filtros, exportação e responsividade do painel.

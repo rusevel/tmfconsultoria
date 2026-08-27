@@ -1,4 +1,4 @@
-import { and, desc, eq, sql } from "drizzle-orm";
+import { and, desc, eq, gte, lte, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { BlogPost, InsertBlogPost, InsertUser, blogPosts, leadSubmissions, newsletterDeliveries, newsletterSubscribers, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
@@ -140,6 +140,19 @@ export async function createLeadSubmission(input: { name: string; company: strin
     source: input.source || "diagnostico-home",
   });
   return { id: Number(result[0].insertId) };
+}
+
+export async function listLeadSubmissions(filters: { from?: string; to?: string; companySize?: string; challenge?: string; source?: string } = {}) {
+  const db = await getDb();
+  if (!db) return [];
+  const conditions = [];
+  if (filters.from) conditions.push(gte(leadSubmissions.createdAt, new Date(`${filters.from}T00:00:00.000Z`)));
+  if (filters.to) conditions.push(lte(leadSubmissions.createdAt, new Date(`${filters.to}T23:59:59.999Z`)));
+  if (filters.companySize) conditions.push(eq(leadSubmissions.companySize, filters.companySize));
+  if (filters.challenge) conditions.push(eq(leadSubmissions.challenge, filters.challenge));
+  if (filters.source) conditions.push(eq(leadSubmissions.source, filters.source));
+  const where = conditions.length ? and(...conditions) : undefined;
+  return db.select().from(leadSubmissions).where(where).orderBy(desc(leadSubmissions.createdAt));
 }
 
 export async function listActiveNewsletterSubscribers() {

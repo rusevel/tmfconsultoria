@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/sidebar";
 import { startLogin } from "@/const";
 import { useIsMobile } from "@/hooks/useMobile";
-import { FileText, LayoutDashboard, LogOut, PanelLeft, Users } from "lucide-react";
+import { FileText, LayoutDashboard, LogOut, Mail, PanelLeft, Users } from "lucide-react";
 import { CSSProperties, useEffect, useRef, useState } from "react";
 import { useLocation } from "wouter";
 import { DashboardLayoutSkeleton } from './DashboardLayoutSkeleton';
@@ -29,7 +29,8 @@ import { Button } from "./ui/button";
 
 const menuItems = [
   { icon: FileText, label: "Redação", path: "/gestor/newsletter" },
-  { icon: Users, label: "Inscritos", path: "/gestor/newsletter#inscritos" },
+  { icon: Users, label: "Leads captados", path: "/gestor/leads" },
+  { icon: Mail, label: "Inscritos", path: "/gestor/newsletter#inscritos" },
   { icon: LayoutDashboard, label: "Site público", path: "/" },
 ];
 
