@@ -214,3 +214,6 @@ A seção Essência foi validada após o deploy do commit eba100e: a divisão ve
 - [x] Testar permissões, validações, responsividade, envio e publicação automática.
 - [x] Usar Resend como provedor principal de entrega e manter Gmail SMTP como contingência configurável, sem armazenar senha normal.
 - [x] Criar painel editorial autenticado e restrito ao gestor para publicação de newsletters.
+- [x] Criar uma oferta de diagnóstico fiscal com gancho direto e palavra-chave de ação para captura de leads.
+- [x] Integrar a oferta à Home, ao formulário de qualificação e ao WhatsApp com mensagem contextual.
+- [x] Garantir consentimento LGPD, rastreamento condicionado e validação responsiva da nova jornada.

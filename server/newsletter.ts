@@ -1,7 +1,7 @@
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { adminProcedure, publicProcedure, router } from "./_core/trpc";
-import { createBlogPost, ensureDelivery, getBlogPostById, getPublishedBlogPostBySlug, listActiveNewsletterSubscribers, listBlogPostsForAdmin, listNewsletterSubscribers, listPublishedBlogPosts, markDeliveryFailed, markDeliverySent, subscribeToNewsletter, updateBlogPost } from "./db";
+import { createBlogPost, createLeadSubmission, ensureDelivery, getBlogPostById, getPublishedBlogPostBySlug, listActiveNewsletterSubscribers, listBlogPostsForAdmin, listNewsletterSubscribers, listPublishedBlogPosts, markDeliveryFailed, markDeliverySent, subscribeToNewsletter, updateBlogPost } from "./db";
 import { newsletterHtml, sendNewsletterEmail } from "./newsletter-mailer";
 
 const initialPosts = [
@@ -51,6 +51,7 @@ export const newsletterRouter = router({
     return post;
   }),
   subscribe: publicProcedure.input(z.object({ email: z.string().email(), name: z.string().max(160).optional(), consent: z.literal(true) })).mutation(({ input }) => subscribeToNewsletter(input.email.trim().toLowerCase(), input.name?.trim() || null).then(() => ({ success: true as const }))),
+  captureLead: publicProcedure.input(z.object({ name: z.string().min(2).max(160), company: z.string().min(2).max(200), email: z.string().email().max(320), companySize: z.string().min(2).max(80), challenge: z.string().min(2).max(120), consent: z.literal(true), source: z.string().max(80).optional() })).mutation(({ input }) => createLeadSubmission({ name: input.name.trim(), company: input.company.trim(), email: input.email.trim().toLowerCase(), companySize: input.companySize, challenge: input.challenge, source: input.source }).then(() => ({ success: true as const }))),
   admin: router({
     listPosts: adminProcedure.query(() => listBlogPostsForAdmin()),
     listSubscribers: adminProcedure.query(() => listNewsletterSubscribers()),

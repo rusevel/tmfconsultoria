@@ -75,3 +75,17 @@ export const newsletterDeliveries = mysqlTable("newsletter_deliveries", {
 
 export type NewsletterDelivery = typeof newsletterDeliveries.$inferSelect;
 export type InsertNewsletterDelivery = typeof newsletterDeliveries.$inferInsert;
+
+export const leadSubmissions = mysqlTable("lead_submissions", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 160 }).notNull(),
+  company: varchar("company", { length: 200 }).notNull(),
+  email: varchar("email", { length: 320 }).notNull(),
+  companySize: varchar("companySize", { length: 80 }).notNull(),
+  challenge: varchar("challenge", { length: 120 }).notNull(),
+  source: varchar("source", { length: 80 }).default("diagnostico-home").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type LeadSubmission = typeof leadSubmissions.$inferSelect;
+export type InsertLeadSubmission = typeof leadSubmissions.$inferInsert;

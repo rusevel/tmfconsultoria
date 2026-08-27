@@ -7,6 +7,7 @@ import "../leadership.css";
 import { ArrowUpRight, Check, ChevronDown, MessageCircle, ShieldCheck, Sparkles, Zap } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 import { LeadQualificationForm } from "@/components/LeadQualificationForm";
+import { DiagnosticLeadOffer } from "@/components/DiagnosticLeadOffer";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Brand } from "@/components/Brand";
@@ -81,6 +82,8 @@ export default function Home() {
         <section className="metrics-strip" aria-label="Benefícios da consultoria">
           <div className="wrap metrics-grid"><div><span className="metric-index">01</span><strong>Tributário</strong><small>mapa de oportunidades legais</small></div><div><span className="metric-index">02</span><strong>Contábil</strong><small>informação para decidir melhor</small></div><div><span className="metric-index">03</span><strong>Marketing</strong><small>posicionamento que gera demanda</small></div><div><span className="metric-index">04</span><strong>TI</strong><small>processos mais seguros e eficientes</small></div></div>
         </section>
+
+        <DiagnosticLeadOffer />
 
         <section id="solucoes" className="section section-solutions">
           <div className="wrap">
@@ -158,7 +161,7 @@ export default function Home() {
 
         <section id="duvidas" className="section faq-section"><div className="wrap faq-layout"><div className="section-heading reveal"><span className="section-kicker">antes de conversar</span><h2>O essencial,<br /><span>sem rodeios.</span></h2><a className="text-link" href={whatsappUrl("Tenho uma dúvida sobre o diagnóstico tributário.")} target="_blank" rel="noreferrer">Tirar uma dúvida no WhatsApp <ArrowUpRight size={16} /></a></div><div className="faq-list reveal"><details><summary>Como começa o diagnóstico?<ChevronDown size={18} /></summary><p>Você envia uma mensagem com o segmento e o principal desafio da empresa. A partir daí, alinhamos o escopo das informações necessárias para uma análise responsável.</p></details><details><summary>A consultoria garante redução de impostos?<ChevronDown size={18} /></summary><p>Não existe promessa responsável sem análise. Avaliamos oportunidades legais conforme os dados e a legislação aplicável, sempre com transparência sobre premissas, riscos e limites.</p></details><details><summary>Vocês também atuam com marketing e TI?<ChevronDown size={18} /></summary><p>Sim. A proposta é integrar inteligência fiscal e contábil com posicionamento, aquisição e processos digitais, quando isso fizer sentido para o momento da empresa.</p></details></div></div></section>
 
-        <section className="section contact-section"><div className="wrap"><div className="contact-box reveal"><div className="contact-copy"><span className="section-kicker">diagnóstico inicial</span><h2>Quero entender<br /><em>onde melhorar.</em></h2><p>Conte o essencial da empresa. A Cenvara usa os dados somente para responder ao pedido e abrir a conversa de atendimento.</p></div><div className="contact-actions"><LeadQualificationForm /></div></div></div></section>
+        <section id="contato" className="section contact-section"><div className="wrap"><div className="contact-box reveal"><div className="contact-copy"><span className="section-kicker">diagnóstico inicial</span><h2>Quero entender<br /><em>onde melhorar.</em></h2><p>Conte o essencial da empresa. A Cenvara usa os dados somente para responder ao pedido e abrir a conversa de atendimento.</p></div><div className="contact-actions"><LeadQualificationForm /></div></div></div></section>
       </main>
 
       <SiteFooter contactMessage={WHATSAPP_MESSAGE} />

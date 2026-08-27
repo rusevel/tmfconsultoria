@@ -1,6 +1,6 @@
 import { and, desc, eq, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { BlogPost, InsertBlogPost, InsertUser, blogPosts, newsletterDeliveries, newsletterSubscribers, users } from "../drizzle/schema";
+import { BlogPost, InsertBlogPost, InsertUser, blogPosts, leadSubmissions, newsletterDeliveries, newsletterSubscribers, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -126,6 +126,20 @@ export async function updateBlogPost(id: number, values: Partial<InsertBlogPost>
   const db = await getDb();
   if (!db) throw new Error("Banco de dados indisponível");
   await db.update(blogPosts).set(values).where(eq(blogPosts.id, id));
+}
+
+export async function createLeadSubmission(input: { name: string; company: string; email: string; companySize: string; challenge: string; source?: string }) {
+  const db = await getDb();
+  if (!db) throw new Error("Banco de dados indisponível");
+  const result = await db.insert(leadSubmissions).values({
+    name: input.name,
+    company: input.company,
+    email: input.email,
+    companySize: input.companySize,
+    challenge: input.challenge,
+    source: input.source || "diagnostico-home",
+  });
+  return { id: Number(result[0].insertId) };
 }
 
 export async function listActiveNewsletterSubscribers() {

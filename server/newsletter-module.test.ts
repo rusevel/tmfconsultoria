@@ -16,6 +16,17 @@ describe("módulo editorial da newsletter", () => {
     expect(html).not.toContain("javascript:");
   });
 
+  it("protege a jornada de diagnóstico e não envia dados pessoais ao analytics", async () => {
+    const formSource = await import("node:fs/promises").then((fs) => fs.readFile(new URL("../client/src/components/LeadQualificationForm.tsx", import.meta.url), "utf8"));
+    const offerSource = await import("node:fs/promises").then((fs) => fs.readFile(new URL("../client/src/components/DiagnosticLeadOffer.tsx", import.meta.url), "utf8"));
+    expect(formSource).toContain("DIAGNÓSTICO");
+    expect(formSource).toContain("captureLead.mutateAsync");
+    expect(formSource).toContain("source: \"diagnostico-home\"");
+    expect(offerSource).toContain("diagnostic_form_cta_click");
+    expect(offerSource).toContain("sem promessa genérica");
+    expect(offerSource).not.toContain("trackEvent(\"lead_qualification_submit\", { name");
+  });
+
   it("define os contratos de publicação e inscrição no servidor", async () => {
     const source = await import("node:fs/promises").then((fs) => fs.readFile(new URL("./newsletter.ts", import.meta.url), "utf8"));
     expect(source).toContain("publishPost");
