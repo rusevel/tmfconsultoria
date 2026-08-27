@@ -221,3 +221,5 @@ A seção Essência foi validada após o deploy do commit eba100e: a divisão ve
 - [x] Adicionar filtros por período, porte, assunto e origem sem expor dados publicamente.
 - [x] Implementar exportação CSV segura dos leads filtrados.
 - [x] Testar permissão de gestor, filtros, exportação e responsividade do painel.
+- [x] Adicionar exportação XLSX dos leads com colunas configuráveis e filtros aplicados.
+- [x] Validar planilha gerada, seleção de colunas, responsividade e publicação.
