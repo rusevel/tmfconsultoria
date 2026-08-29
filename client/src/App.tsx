@@ -19,6 +19,7 @@ import Presentation from "@/pages/Presentation";
 import About from "@/pages/About";
 import AdminNewsletter from "./pages/AdminNewsletter";
 import AdminLeads from "./pages/AdminLeads";
+import InstagramHub from "./pages/InstagramHub";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -34,6 +35,7 @@ function Router() {
       <Route path="/sobre-a-cenvara" component={About} />
       <Route path="/gestor/newsletter" component={AdminNewsletter} />
       <Route path="/gestor/leads" component={AdminLeads} />
+      <Route path="/instagram" component={InstagramHub} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

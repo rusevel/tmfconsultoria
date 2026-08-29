@@ -223,3 +223,8 @@ A seção Essência foi validada após o deploy do commit eba100e: a divisão ve
 - [x] Testar permissão de gestor, filtros, exportação e responsividade do painel.
 - [x] Adicionar exportação XLSX dos leads com colunas configuráveis e filtros aplicados.
 - [x] Validar planilha gerada, seleção de colunas, responsividade e publicação.
+- [ ] Criar kit de lançamento do Instagram da Cenvara com estratégia, bio, destaques, linha editorial e calendário.
+- [ ] Criar 9 roteiros de Reels, CTAs, fluxo de palavra-chave e materiais de captação alinhados ao diagnóstico fiscal.
+- [ ] Preparar modelos comerciais: tabela de preços, calculadora de margem, benchmark, contrato, roteiro e apresentação de reunião.
+- [ ] Preparar orientações de WhatsApp Business, link da bio e integração com o site.
+- [ ] Gerar ativos visuais e um pacote compactado pronto para download, sem executar cadastro legal, abertura bancária ou publicação em conta de terceiros.
